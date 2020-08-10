@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Maid\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj": {}
+    "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Maid\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj": {
+    "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Maid\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj",
+        "projectUniqueName": "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj",
         "projectName": "SmartRead.Model",
-        "projectPath": "C:\\Users\\Maid\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj",
-        "packagesPath": "C:\\Users\\Maid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Maid\\Source\\Repos\\SmartRead\\SmartRead.Model\\obj\\",
+        "projectPath": "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Model\\SmartRead.Model.csproj",
+        "packagesPath": "C:\\Users\\maidb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Maid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maidb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -57,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
