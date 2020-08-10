@@ -1,0 +1,9 @@
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\bin\Debug\SmartRead.WinUI.exe.config
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\bin\Debug\SmartRead.WinUI.exe
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\bin\Debug\SmartRead.WinUI.pdb
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.csprojAssemblyReference.cache
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.Properties.Resources.resources
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.csproj.GenerateResource.cache
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.csproj.CoreCompileInputs.cache
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.exe
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.WinUI\obj\Debug\SmartRead.WinUI.pdb

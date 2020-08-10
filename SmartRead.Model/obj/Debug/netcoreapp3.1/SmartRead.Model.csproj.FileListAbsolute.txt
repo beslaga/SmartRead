@@ -1,0 +1,9 @@
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\bin\Debug\netcoreapp3.1\SmartRead.Model.deps.json
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\bin\Debug\netcoreapp3.1\SmartRead.Model.dll
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\bin\Debug\netcoreapp3.1\SmartRead.Model.pdb
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.csproj.CoreCompileInputs.cache
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.AssemblyInfoInputs.cache
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.AssemblyInfo.cs
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.dll
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.pdb
+C:\Users\Maid\Source\Repos\SmartRead\SmartRead.Model\obj\Debug\netcoreapp3.1\SmartRead.Model.csprojAssemblyReference.cache
