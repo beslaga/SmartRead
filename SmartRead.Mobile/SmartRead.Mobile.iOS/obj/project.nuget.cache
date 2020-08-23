@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gtPl7WJshB207CYYsrHKjSEnB4T1TeQ+NSmICqOpkp8gQ7aMLyKDTn72fdOwa4/zZ2Y2Xk1kOlj8HwynTUCoRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maidb\\Source\\Repos\\SmartRead\\SmartRead.Mobile\\SmartRead.Mobile.iOS\\SmartRead.Mobile.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}

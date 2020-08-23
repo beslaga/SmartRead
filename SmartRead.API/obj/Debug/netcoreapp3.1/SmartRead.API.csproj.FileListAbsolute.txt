@@ -136,3 +136,9 @@ C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\obj\Debug\netcoreapp3.1\Smar
 C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\obj\Debug\netcoreapp3.1\SmartRead.API.genruntimeconfig.cache
 C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\maidb\Source\Repos\SmartRead\SmartRead.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
