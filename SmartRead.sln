@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartRead.Mobile", "SmartRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRead.Mobile.UWP", "SmartRead.Mobile.UWP\SmartRead.Mobile.UWP.csproj", "{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRead.Model", "SmartRead.Model\SmartRead.Model.csproj", "{97ACE557-301B-49DD-8821-2904A1C78EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartRead.Model", "SmartRead.Model\SmartRead.Model.csproj", "{97ACE557-301B-49DD-8821-2904A1C78EE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -180,6 +180,8 @@ Global
 		{082E7155-5E68-4039-9CB0-DFDB14FBBE4C}.Release|x86.ActiveCfg = Release|Any CPU
 		{082E7155-5E68-4039-9CB0-DFDB14FBBE4C}.Release|x86.Build.0 = Release|Any CPU
 		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|Any CPU.Build.0 = Debug|x86
+		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|ARM.ActiveCfg = Debug|ARM
 		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|ARM.Build.0 = Debug|ARM
 		{A567AF72-16E1-4EE4-8CA3-DA1506E0FFDC}.Debug|ARM.Deploy.0 = Debug|ARM
