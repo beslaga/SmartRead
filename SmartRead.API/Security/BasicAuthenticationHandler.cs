@@ -63,10 +63,10 @@ namespace SmartRead.API.Security
 
             if (PrijavljeniKorisnik.Administrator != null)
             {
-                claims.Add(new Claim(ClaimTypes.Role, "Administrator"));
+                claims.Add(new Claim(ClaimTypes.Role, Roles.Administrator));
             } else
             {
-                claims.Add(new Claim(ClaimTypes.Role, "BasicUser"));
+                claims.Add(new Claim(ClaimTypes.Role, Roles.BasicUser));
             }
 
             var identity = new ClaimsIdentity(claims, Scheme.Name);

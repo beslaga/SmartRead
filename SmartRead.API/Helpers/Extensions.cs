@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SmartRead.API.Helpers
+﻿namespace SmartRead.API.Helpers
 {
     public static class Extensions
     {

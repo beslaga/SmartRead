@@ -1,5 +1,6 @@
 ﻿using Flurl.Http;
 using SmartRead.Model.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,101 +12,154 @@ namespace SmartRead.WinUI.Helpers
     {
         public static string Username { get; set; }
         public static string Password { get; set; }
+        public static Model.Korisnik PrijavljeniKorisnik { get; set; }
 
-        private string _route = null;
-        public APIService(string route)
+        private readonly string _route;
+        public APIService(string route) // controller name
         {
             _route = route;
         }
 
-        public async Task<T> Get<T>(object search)
+        public async Task<T> Get<T>(object search, string action = null)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
 
             try
             {
+                if (action != null)
+                {
+                    url += $"/{action}";
+                }
                 if (search != null)
                 {
                     url += "?";
                     url += await search.ToQueryString();
                 }
-
                 return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
             }
             catch (FlurlHttpException ex)
             {
-                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    MessageBox.Show("You are not authentificated", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
+                }
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    MessageBox.Show("Nemate pristup.");
                 }
                 throw;
             }
         }
 
-        public async Task<T> GetById<T>(object id)
-        {
-            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
-
-            return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
-        }
-
-        public async Task<T> Insert<T>(object request)
+        public async Task<T> GetById<T>(int id, string action = null)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
 
+            if (action != null)
+            {
+                url += $"/{action}";
+            }
+            url += $"/{id}";
+
+            try
+            {
+                return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+            }
+            catch (FlurlHttpException ex)
+            {
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
+                }
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    MessageBox.Show("Nemate pristup.");
+                }
+                throw;
+            }
+        }
+
+        public async Task<T> Insert<T>(object request, string action = null)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}";
+            url += $"/{ _route}";
+            if (action != null)
+            {
+                url += $"/{action}";
+            }
             try
             {
                 return await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
             }
             catch (FlurlHttpException ex)
             {
-                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
-
-                var stringBuilder = new StringBuilder();
-                foreach (var error in errors)
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                    MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
+                else if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    MessageBox.Show("Nemate pristup.");
+                }
+                else
+                {
+                    var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
-                MessageBox.Show(stringBuilder.ToString(), "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var stringBuilder = new StringBuilder();
+                    foreach (var error in errors)
+                    {
+                        stringBuilder.AppendLine(string.Join(",", error.Value));
+                    }
+
+                    MessageBox.Show(stringBuilder.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return default(T);
+            }
+            catch (Exception)
+            {
+                return default(T);
+
             }
         }
 
-        public async Task<T> Update<T>(object id, object request)
+        public async Task<T> Update<T>(int id, object request, string action = null)
         {
-            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
-
             try
             {
+                var url = $"{Properties.Settings.Default.APIUrl}";
+                url += $"/{ _route}";
+                if (action != null)
+                {
+                    url += $"/{action}";
+                }
+                url += $"/{id}";
+
                 return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
             }
             catch (FlurlHttpException ex)
             {
-                var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
-
-                var stringBuilder = new StringBuilder();
-                foreach (var error in errors)
+                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    stringBuilder.AppendLine($"{error.Key}, ${string.Join(",", error.Value)}");
+                    MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
+                else if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                {
+                    MessageBox.Show("Nemate pristup.");
+                }
+                else
+                {
+                    var errors = await ex.GetResponseJsonAsync<Dictionary<string, string[]>>();
 
-                MessageBox.Show(stringBuilder.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var stringBuilder = new StringBuilder();
+                    foreach (var error in errors)
+                    {
+                        stringBuilder.AppendLine(string.Join(",", error.Value));
+                    }
+
+                    MessageBox.Show(stringBuilder.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return default(T);
             }
-        }
-
-        public async Task<T> Login<T>(object search)
-        {
-            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/getAdmin";
-
-            if (search != null)
-            {
-                url += "?";
-                url += await search.ToQueryString();
-            }
-
-            return await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
         }
     }
 }

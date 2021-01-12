@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SmartRead.API.Services;
-using System.Collections.Generic;
 
 namespace SmartRead.API.Controllers
 {
@@ -18,9 +17,9 @@ namespace SmartRead.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Model.Korisnik>> GetBesla()
+        public ActionResult<Model.Korisnik> GetBesla()
         {
-            return _service.Get();
+            return _service.GetTrenutniKorisnik();
         }
     }
 }
