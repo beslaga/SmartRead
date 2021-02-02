@@ -39,11 +39,11 @@ namespace SmartRead.WinUI.Helpers
             }
             catch (FlurlHttpException ex)
             {
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
                 {
                     MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
                 {
                     MessageBox.Show("Nemate pristup.");
                 }
@@ -67,11 +67,11 @@ namespace SmartRead.WinUI.Helpers
             }
             catch (FlurlHttpException ex)
             {
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
                 {
                     MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
                 {
                     MessageBox.Show("Nemate pristup.");
                 }
@@ -93,11 +93,11 @@ namespace SmartRead.WinUI.Helpers
             }
             catch (FlurlHttpException ex)
             {
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
                 {
                     MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
-                else if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                else if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
                 {
                     MessageBox.Show("Nemate pristup.");
                 }
@@ -138,11 +138,11 @@ namespace SmartRead.WinUI.Helpers
             }
             catch (FlurlHttpException ex)
             {
-                if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
                 {
                     MessageBox.Show("Korisničko ime ili lozinka nisu tačni.");
                 }
-                else if (ex.Call.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.Forbidden)
+                else if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Forbidden)
                 {
                     MessageBox.Show("Nemate pristup.");
                 }

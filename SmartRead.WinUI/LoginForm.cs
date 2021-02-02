@@ -30,7 +30,7 @@ namespace SmartRead.WinUI
             try
             {
                 Cursor = Cursors.WaitCursor;
-                APIService.PrijavljeniKorisnik = await _serviceLogin.Get<Model.Korisnik>(new Model.Requests.LoginRequest { username = usernameTextBox.Text, password = passwordTextBox.Text });
+                APIService.PrijavljeniKorisnik = await _serviceLogin.Insert<Model.Korisnik>(new Model.Requests.LoginRequest { username = usernameTextBox.Text, password = passwordTextBox.Text });
                 Cursor = Cursors.Default;
                 if (APIService.PrijavljeniKorisnik == null)
                 {

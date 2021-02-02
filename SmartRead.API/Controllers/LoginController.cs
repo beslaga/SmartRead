@@ -14,10 +14,10 @@ namespace SmartRead.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public ActionResult<Model.Korisnik> Login([FromQuery] string username, [FromQuery] string password)
+        [HttpPost]
+        public ActionResult<Model.Korisnik> Login([FromBody] Model.Requests.LoginRequest request)
         {
-            return _service.Autentifikacija(username, password);
+            return _service.Autentifikacija(request.username, request.password);
         }
     }
 }
