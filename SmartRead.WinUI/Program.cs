@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartRead.WinUI.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,17 @@ namespace SmartRead.WinUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            StartApp();
+        }
+
+        public static void StartApp()
+        {
+            var formLogin = new LoginForm();
+            formLogin.ShowDialog();
+            if (formLogin.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
         }
     }
 }
