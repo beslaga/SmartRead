@@ -13,5 +13,11 @@ namespace SmartRead.API.Controllers
         {
             _service = service;
         }
+
+        [HttpGet]
+        public ActionResult<Model.Korisnik> Get()
+        {
+            return _service.GetTrenutniKorisnik();
+        }
     }
 }

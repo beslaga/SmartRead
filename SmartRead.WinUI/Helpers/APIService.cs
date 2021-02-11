@@ -20,7 +20,7 @@ namespace SmartRead.WinUI.Helpers
             _route = route;
         }
 
-        public async Task<T> Get<T>(object search, string action = null)
+        public async Task<T> Get<T>(object search = null, string action = null)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
 

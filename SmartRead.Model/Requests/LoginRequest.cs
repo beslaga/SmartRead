@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SmartRead.Model.Requests
+﻿namespace SmartRead.Model.Requests
 {
     public class LoginRequest
     {

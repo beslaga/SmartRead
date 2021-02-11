@@ -29,75 +29,91 @@ namespace SmartRead.WinUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelUser = new System.Windows.Forms.Label();
-            this.buttonSignOut = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.logoImage = new System.Windows.Forms.PictureBox();
+            this.kategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikažiKategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajKategorijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(12, 38);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(140, 24);
-            this.labelUser.TabIndex = 0;
-            this.labelUser.Text = "Welcome, User";
-            // 
-            // buttonSignOut
-            // 
-            this.buttonSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSignOut.Location = new System.Drawing.Point(671, 35);
-            this.buttonSignOut.Name = "buttonSignOut";
-            this.buttonSignOut.Size = new System.Drawing.Size(117, 33);
-            this.buttonSignOut.TabIndex = 1;
-            this.buttonSignOut.Text = "Sign Out";
-            this.buttonSignOut.UseVisualStyleBackColor = true;
-            this.buttonSignOut.Click += new System.EventHandler(this.buttonSignOut_Click);
             // 
             // menuStrip
             // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kategorijeToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(851, 24);
+            this.menuStrip.Size = new System.Drawing.Size(882, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // pictureBox1
+            // logoImage
             // 
-            this.pictureBox1.Image = global::SmartRead.WinUI.Properties.Resources.SmartReadLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(851, 485);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.logoImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoImage.Image = global::SmartRead.WinUI.Properties.Resources.SmartReadLogo;
+            this.logoImage.Location = new System.Drawing.Point(0, 24);
+            this.logoImage.Name = "logoImage";
+            this.logoImage.Size = new System.Drawing.Size(882, 486);
+            this.logoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoImage.TabIndex = 3;
+            this.logoImage.TabStop = false;
+            // 
+            // kategorijeToolStripMenuItem
+            // 
+            this.kategorijeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.prikažiKategorijeToolStripMenuItem,
+            this.dodajKategorijuToolStripMenuItem});
+            this.kategorijeToolStripMenuItem.Name = "kategorijeToolStripMenuItem";
+            this.kategorijeToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.kategorijeToolStripMenuItem.Text = "Kategorije";
+            // 
+            // prikažiKategorijeToolStripMenuItem
+            // 
+            this.prikažiKategorijeToolStripMenuItem.Name = "prikažiKategorijeToolStripMenuItem";
+            this.prikažiKategorijeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prikažiKategorijeToolStripMenuItem.Text = "Prikaži Kategorije";
+            this.prikažiKategorijeToolStripMenuItem.Click += new System.EventHandler(this.prikažiKategorijeToolStripMenuItem_Click);
+            // 
+            // dodajKategorijuToolStripMenuItem
+            // 
+            this.dodajKategorijuToolStripMenuItem.Name = "dodajKategorijuToolStripMenuItem";
+            this.dodajKategorijuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajKategorijuToolStripMenuItem.Text = "Dodaj Kategoriju";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 559);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonSignOut);
-            this.Controls.Add(this.labelUser);
+            this.ClientSize = new System.Drawing.Size(882, 510);
+            this.Controls.Add(this.logoImage);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.Text = "SmartRead Administracija";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Button buttonSignOut;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logoImage;
+        private System.Windows.Forms.ToolStripMenuItem kategorijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prikažiKategorijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajKategorijuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

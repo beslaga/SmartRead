@@ -25,7 +25,7 @@ namespace SmartRead.WinUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:63596/api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:55992/api")]
         public string APIUrl {
             get {
                 return ((string)(this["APIUrl"]));

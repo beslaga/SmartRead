@@ -47,6 +47,7 @@ namespace SmartRead.API
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddScoped<IKorisniciService, KorisniciService>();
+            services.AddScoped<IKategorijeService, KategorijeService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -98,8 +99,6 @@ namespace SmartRead.API
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "SmartRead API");
             });
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
