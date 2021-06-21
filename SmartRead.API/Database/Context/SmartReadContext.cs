@@ -13,11 +13,13 @@ namespace SmartRead.API.Database.Context
         public virtual DbSet<Kategorija> Kategorije { get; set; }
         public virtual DbSet<Korisnik> Korisnici { get; set; }
         public virtual DbSet<KorisnikKategorija> KorisnikKategorije { get; set; }
+        public virtual DbSet<KorisnikClanak> KorisnikClanci { get; set; }
         public virtual DbSet<KorisnikPrijava> KorisnikPrijave { get; set; }
         public virtual DbSet<Uplata> Uplate { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<KorisnikKategorija>().HasKey(o => new { o.KorisnikId, o.KategorijaId });
+            modelBuilder.Entity<KorisnikClanak>().HasKey(o => new { o.KorisnikId, o.ClanakId });
             modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()).ToList().ForEach(r => r.DeleteBehavior = DeleteBehavior.Restrict);
             base.OnModelCreating(modelBuilder);
         }
