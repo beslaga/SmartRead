@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartRead.API.Database.Context;
 
 namespace SmartRead.API.Migrations
 {
     [DbContext(typeof(SmartReadContext))]
-    partial class SmartReadContextModelSnapshot : ModelSnapshot
+    [Migration("20210621202646_DodaniKorisnikClanak")]
+    partial class DodaniKorisnikClanak
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
