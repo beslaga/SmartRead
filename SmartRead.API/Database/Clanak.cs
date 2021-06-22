@@ -22,7 +22,7 @@ namespace SmartRead.API.Database
         public Korisnik Autor { get; set; }
         public int AutorId { get; set; }
         [ForeignKey(nameof(OdobravateljId))]
-        public Administrator Odobravatelj { get; set; }
+        public Korisnik Odobravatelj { get; set; }
         public int? OdobravateljId { get; set; }
 
         public ICollection<KorisnikPrijava> Prijave { get; set; }

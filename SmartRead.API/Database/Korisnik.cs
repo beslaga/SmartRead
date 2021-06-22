@@ -13,6 +13,7 @@ namespace SmartRead.API.Database
             Clanci = new HashSet<Clanak>();
             PretplaceneKategorije = new HashSet<KorisnikKategorija>();
             PrijavljeniClanci = new HashSet<KorisnikPrijava>();
+            Uloge = new HashSet<KorisnikUloga>();
         }
 
         [Key]
@@ -31,11 +32,11 @@ namespace SmartRead.API.Database
         [ForeignKey(nameof(DrzavaId))]
         public Drzava Drzava { get; set; }
         public int DrzavaId { get; set; }
-        public Administrator Administrator { get; set; }
 
         public ICollection<Uplata> Uplate { get; set; }
         public ICollection<Clanak> Clanci { get; set; }
         public ICollection<KorisnikKategorija> PretplaceneKategorije { get; set; }
         public ICollection<KorisnikPrijava> PrijavljeniClanci { get; set; }
+        public ICollection<KorisnikUloga> Uloge { get; set; }
     }
 }

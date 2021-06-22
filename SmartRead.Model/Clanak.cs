@@ -13,7 +13,7 @@ namespace SmartRead.Model
         public bool Obrisan { get; set; }
         public Korisnik Autor { get; set; }
         public int AutorId { get; set; }
-        public Administrator Odobravatelj { get; set; }
+        public Korisnik Odobravatelj { get; set; }
         public int? OdobravateljId { get; set; }
         public ICollection<KorisnikPrijava> Prijave { get; set; }
     }

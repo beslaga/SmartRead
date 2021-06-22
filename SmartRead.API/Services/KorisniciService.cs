@@ -27,7 +27,7 @@ namespace SmartRead.API.Services
 
         public Korisnik Autentifikacija(string username, string password)
         {
-            var korisnik = _context.Korisnici.Include(x => x.Administrator).Include(x => x.Drzava).FirstOrDefault(x => x.Username == username);
+            var korisnik = _context.Korisnici.Include(x => x.Drzava).Include(i => i.Uloge).FirstOrDefault(x => x.Username == username);
 
             if (korisnik == null) { return null; }
             var newHash = GenerateHash(korisnik.PasswordSalt, password);
@@ -40,7 +40,7 @@ namespace SmartRead.API.Services
 
         public List<Model.Korisnik> Get()
         {
-            return _mapper.Map<List<Model.Korisnik>>(_context.Korisnici.Include(x => x.Drzava).Include(x => x.Administrator).ToList());
+            return _mapper.Map<List<Model.Korisnik>>(_context.Korisnici.Include(x => x.Drzava).Include(i => i.Uloge).ToList());
         }
 
         public Model.Korisnik Insert(KorisniciInsertRequest request)

@@ -56,17 +56,16 @@ namespace SmartRead.API.Security
 
             _korisniciService.SetPrijavljeniKorisnik(PrijavljeniKorisnik);
 
-            var claims = new List<Claim> {
+            var claims = new List<Claim>
+            {
                 new Claim(ClaimTypes.NameIdentifier, PrijavljeniKorisnik.Username),
                 new Claim(ClaimTypes.Name, PrijavljeniKorisnik.ImePrezime),
+                new Claim("Id", PrijavljeniKorisnik.Id.ToString()),
             };
 
-            if (PrijavljeniKorisnik.Administrator != null)
+            foreach (var uloga in PrijavljeniKorisnik.Uloge)
             {
-                claims.Add(new Claim(ClaimTypes.Role, Roles.Administrator));
-            } else
-            {
-                claims.Add(new Claim(ClaimTypes.Role, Roles.BasicUser));
+                claims.Add(new Claim(ClaimTypes.Role, uloga.Uloga.Naziv));
             }
 
             var identity = new ClaimsIdentity(claims, Scheme.Name);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace SmartRead.Model
 {
@@ -18,11 +17,11 @@ namespace SmartRead.Model
         public bool Obrisan { get; set; }
         public byte[] Slika { get; set; }
         public Drzava Drzava { get; set; }
-        public Administrator Administrator { get; set; }
-
         public ICollection<Uplata> Uplate { get; set; }
         public ICollection<Clanak> Clanci { get; set; }
         public ICollection<KorisnikKategorija> PretplaceneKategorije { get; set; }
         public ICollection<KorisnikPrijava> PrijavljeniClanci { get; set; }
+        public ICollection<KorisnikUloga> Uloge { get; set; }
+
     }
 }

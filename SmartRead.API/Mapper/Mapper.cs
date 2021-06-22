@@ -7,7 +7,6 @@ namespace SmartRead.API.Mapper
     {
         public Mapper()
         {
-            CreateMap<Administrator, Model.Administrator>();
             CreateMap<Clanak, Model.Clanak>();
             CreateMap<Drzava, Model.Drzava>();
             CreateMap<Kategorija, Model.Kategorija>();
@@ -15,6 +14,7 @@ namespace SmartRead.API.Mapper
             CreateMap<KorisnikKategorija, Model.KorisnikKategorija>();
             CreateMap<KorisnikPrijava, Model.KorisnikPrijava>();
             CreateMap<Uplata, Model.Uplata>();
+            CreateMap<Uloga, Model.Uloga>();
 
             CreateMap<Kategorija, Model.Requests.KategorijaInsertRequest>().ReverseMap();
         }

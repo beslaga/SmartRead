@@ -31,7 +31,7 @@ namespace SmartRead.WinUI
                 {
                     MessageBox.Show("Pogrešan username i/ili password.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (APIService.PrijavljeniKorisnik.Administrator == null)
+                else if (APIService.PrijavljeniKorisnik == null)
                 {
                     MessageBox.Show("Nemate permisije za pristup admin aplikaciji.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     APIService.PrijavljeniKorisnik = null;
