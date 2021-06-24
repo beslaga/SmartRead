@@ -48,7 +48,7 @@ namespace SmartRead.WinUI.Forms.Kategorije
             Model.Kategorija novaKategorija;
             if (isEditing && kategorija != null)
             {
-                novaKategorija = await _service.Update<Model.Kategorija>((int)kategorija.Id, new Model.Requests.KategorijaInsertRequest { Naziv = nameTextBox.Text, Obrisan = obrisanCheckBox.Checked });
+                novaKategorija = await _service.Update<Model.Kategorija>((int)kategorija.Id, new Model.Requests.KategorijaUpsertRequest { Naziv = nameTextBox.Text});
             } else
             {
                 novaKategorija = await _service.Insert<Model.Kategorija>(nameTextBox.Text);

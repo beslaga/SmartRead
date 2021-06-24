@@ -10,6 +10,8 @@ using Microsoft.OpenApi.Models;
 using SmartRead.API.Database.Context;
 using SmartRead.API.Security;
 using SmartRead.API.Services;
+using SmartRead.Model;
+using SmartRead.Model.Requests;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using IDocumentFilter = Swashbuckle.AspNetCore.SwaggerGen.IDocumentFilter;
@@ -44,10 +46,14 @@ namespace SmartRead.API
             services.AddDbContext<SmartReadContext>(options => options.UseSqlServer(connection));
             services.AddAutoMapper(typeof(Startup));
 
-            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddControllers().AddNewtonsoftJson(options => 
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.AddTransient<
+                ICrudService<Kategorija, KategorijaSearchRequest, KategorijaUpsertRequest, KategorijaUpsertRequest>,
+                CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>>();
 
             services.AddScoped<IKorisniciService, KorisniciService>();
-            services.AddScoped<IKategorijeService, KategorijeService>();
 
             services.AddSwaggerGen(c =>
             {

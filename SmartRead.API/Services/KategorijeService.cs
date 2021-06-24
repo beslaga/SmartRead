@@ -1,76 +1,37 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using SmartRead.API.Database.Context;
 using SmartRead.Model;
+using SmartRead.Model.Requests;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
 {
-    public class KategorijeService: IKategorijeService
+    public class KategorijeService : 
+        CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>
     {
-        private SmartReadContext _context;
-        private IMapper _mapper;
-        public KategorijeService(SmartReadContext context, IMapper mapper)
+        public KategorijeService(SmartReadContext context, IMapper mapper) : base(context, mapper)
         {
-            _mapper = mapper;
-            _context = context;
+
         }
 
-        public List<Kategorija> Get(Model.Requests.KategorijaInsertRequest request)
+        public override async Task<List<Kategorija>> Get(KategorijaSearchRequest search)
         {
-            var query = _context.Kategorije.AsQueryable();
+            var query = _context.Set<Kategorija>()
+                .AsNoTracking()
+                .AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(request.Naziv))
+            if (!string.IsNullOrWhiteSpace(search.Naziv))
             {
-                query = query.Where(x => x.Naziv.Contains(request.Naziv));
+                query = query.Where(x => x.Naziv.Contains(search.Naziv));
             }
 
-            query = query.Where(x => x.Obrisan == request.Obrisan);
+            query = query.Where(x => x.Obrisan == search.Obrisan);
 
-            var list = query.ToList();
-
-            return _mapper.Map<List<Model.Kategorija>>(list);
-        }
-
-        public Kategorija Insert(string naziv)
-        {
-            var kategorija = new Database.Kategorija
-            {
-                Naziv = naziv,
-                Obrisan = false
-            };
-
-            _context.Kategorije.Add(kategorija);
-            _context.SaveChanges();
-
-            return _mapper.Map<Model.Kategorija>(kategorija);
-        }
-
-        public Kategorija Update(int id, Model.Requests.KategorijaInsertRequest request)
-        {
-            var kategorija = _context.Kategorije.Find(id);
-            if (kategorija == null)
-            {
-                return null;
-            }
-            _mapper.Map(request, kategorija);
-            _context.SaveChanges();
-
-            return _mapper.Map<Model.Kategorija>(kategorija);
-        }
-
-        public bool Delete(int id)
-        {
-            var kategorija = _context.Kategorije.Find(id);
-            if (kategorija == null)
-            {
-                return false;
-            }
-
-            kategorija.Obrisan = true;
-            _context.SaveChanges();
-
-            return true;
+            var list = await query.ToListAsync();
+            return _mapper.Map<List<Kategorija>>(list);
         }
     }
 }
