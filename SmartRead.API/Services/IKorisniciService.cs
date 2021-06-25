@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using SmartRead.Model;
+using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
 {
-    public interface IKorisniciService
+    public interface IKorisniciService : IBaseService<Korisnik, KorisnikSearchRequest>
     {
-        List<Model.Korisnik> Get();
-        Model.Korisnik GetTrenutniKorisnik();
-        Model.Korisnik GetPrijavljeniKorisnik();
-        Model.Korisnik Autentifikacija(string username, string password);
-        void SetPrijavljeniKorisnik(Model.Korisnik currentUser);
+        Task<Korisnik> Autentifikacija(string username, string password);
     }
 }

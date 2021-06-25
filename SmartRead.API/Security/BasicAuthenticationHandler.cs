@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SmartRead.API.Helpers;
 using SmartRead.API.Services;
+using SmartRead.Model;
 using System;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
@@ -35,7 +36,7 @@ namespace SmartRead.API.Security
             if (!Request.Headers.ContainsKey("Authorization"))
                 return AuthenticateResult.Fail("Missing Authorization Header");
 
-            Model.Korisnik PrijavljeniKorisnik = null;
+            Korisnik PrijavljeniKorisnik = null;
 
             try
             {
@@ -44,7 +45,7 @@ namespace SmartRead.API.Security
                 var credentials = Encoding.UTF8.GetString(credentialBytes).Split(':');
                 var username = credentials.First();
                 var password = credentials.Second();
-                PrijavljeniKorisnik = _korisniciService.Autentifikacija(username, password);
+                PrijavljeniKorisnik = await _korisniciService.Autentifikacija(username, password);
             }
             catch
             {
@@ -54,7 +55,6 @@ namespace SmartRead.API.Security
             if (PrijavljeniKorisnik == null)
                 return AuthenticateResult.Fail("Invalid Username or Password");
 
-            _korisniciService.SetPrijavljeniKorisnik(PrijavljeniKorisnik);
 
             var claims = new List<Claim>
             {

@@ -1,23 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartRead.API.Services;
+using SmartRead.Model;
 
 namespace SmartRead.API.Controllers
 {
-    [Route("api/korisnici")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class KorisniciController : ControllerBase
+    public class KorisniciController : BaseController<Korisnik, KorisnikSearchRequest>
     {
         private readonly IKorisniciService _service;
 
-        public KorisniciController(IKorisniciService service)
+        public KorisniciController(IBaseService<Korisnik, KorisnikSearchRequest> service) : base(service)
         {
-            _service = service;
-        }
-
-        [HttpGet]
-        public ActionResult<Model.Korisnik> Get()
-        {
-            return _service.GetTrenutniKorisnik();
         }
     }
 }

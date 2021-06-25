@@ -2,59 +2,37 @@
 using Microsoft.EntityFrameworkCore;
 using SmartRead.API.Database.Context;
 using SmartRead.Model;
-using SmartRead.Model.Requests;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
 {
-    public class KorisniciService : IKorisniciService
+    public class KorisniciService : 
+        BaseService<Korisnik, KorisnikSearchRequest, Database.Korisnik>,
+        IKorisniciService
     {
-        private readonly SmartReadContext _context;
-        private readonly IMapper _mapper;
-
-        private Korisnik _prijavljeniKorisnik;
-
-
-        public KorisniciService(SmartReadContext context, IMapper mapper)
+        public KorisniciService(SmartReadContext context, IMapper mapper) : base(context, mapper)
         {
-            _context = context;
-            _mapper = mapper;
         }
 
-        public Korisnik Autentifikacija(string username, string password)
+        public async Task<Korisnik> Autentifikacija(string username, string password)
         {
-            var korisnik = _context.Korisnici.Include(x => x.Drzava).Include(i => i.Uloge).FirstOrDefault(x => x.Username == username);
+            var korisnik = await _context.Korisnici
+                .Include(x => x.Drzava)
+                .Include(i => i.Uloge)
+                .FirstOrDefaultAsync(x => x.Username == username);
 
-            if (korisnik == null) { return null; }
-            var newHash = GenerateHash(korisnik.PasswordSalt, password);
-            if (newHash == korisnik.PasswordHash)
+            if (korisnik != null)
             {
-                return _mapper.Map<Korisnik>(korisnik);
+                var newHash = GenerateHash(korisnik.PasswordSalt, password);
+                if (newHash == korisnik.PasswordHash)
+                {
+                    return _mapper.Map<Korisnik>(korisnik);
+                }
             }
             return null;
-        }
-
-        public List<Model.Korisnik> Get()
-        {
-            return _mapper.Map<List<Model.Korisnik>>(_context.Korisnici.Include(x => x.Drzava).Include(i => i.Uloge).ToList());
-        }
-
-        public Model.Korisnik Insert(KorisniciInsertRequest request)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void SetPrijavljeniKorisnik(Korisnik korisnik)
-        {
-            _prijavljeniKorisnik = korisnik;
-        }
-        public Korisnik GetPrijavljeniKorisnik()
-        {
-            return _prijavljeniKorisnik;
         }
 
         public static string GenerateSalt()
@@ -76,11 +54,6 @@ namespace SmartRead.API.Services
             HashAlgorithm algorithm = HashAlgorithm.Create("SHA1");
             byte[] inArray = algorithm.ComputeHash(dst);
             return Convert.ToBase64String(inArray);
-        }
-
-        public Korisnik GetTrenutniKorisnik()
-        {
-            return _prijavljeniKorisnik;
         }
     }
 }

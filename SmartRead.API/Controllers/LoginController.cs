@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SmartRead.API.Services;
+using System.Threading.Tasks;
 
 namespace SmartRead.API.Controllers
 {
-    [Route("api/login")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -15,9 +16,9 @@ namespace SmartRead.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Model.Korisnik> Login([FromBody] Model.Requests.LoginRequest request)
+        public async Task<ActionResult<Model.Korisnik>> Login([FromBody] Model.Requests.LoginRequest request)
         {
-            return _service.Autentifikacija(request.username, request.password);
+            return await _service.Autentifikacija(request.username, request.password);
         }
     }
 }
