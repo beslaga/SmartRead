@@ -42,7 +42,7 @@ namespace SmartRead.API
         {
             services.AddControllers();
 
-            var connection = Configuration.GetConnectionString("SmartReadLocal");
+            var connection = Configuration.GetConnectionString("SmartRead");
             services.AddDbContext<SmartReadContext>(options => options.UseSqlServer(connection));
             services.AddAutoMapper(typeof(Startup));
 
