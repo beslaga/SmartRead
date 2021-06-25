@@ -53,7 +53,12 @@ namespace SmartRead.API
                 ICrudService<Kategorija, KategorijaSearchRequest, KategorijaUpsertRequest, KategorijaUpsertRequest>,
                 CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>>();
 
+            services.AddTransient<IBaseService<Drzava, object>, BaseService<Drzava, object, Database.Drzava>>();
+            
+            
             services.AddScoped<IKorisniciService, KorisniciService>();
+            
+            services.AddRouting(options => options.LowercaseUrls = true);
 
             services.AddSwaggerGen(c =>
             {

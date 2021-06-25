@@ -83,5 +83,10 @@ namespace SmartRead.WinUI.Forms
                 Close();
             }
         }
+
+        private void dodajKategorijuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

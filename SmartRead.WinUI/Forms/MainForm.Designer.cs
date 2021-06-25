@@ -30,11 +30,11 @@ namespace SmartRead.WinUI.Forms
         private void InitializeComponent()
         {
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.logoImage = new System.Windows.Forms.PictureBox();
             this.kategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiKategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajKategorijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoImage = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
@@ -49,17 +49,6 @@ namespace SmartRead.WinUI.Forms
             this.menuStrip.Size = new System.Drawing.Size(882, 24);
             this.menuStrip.TabIndex = 2;
             this.menuStrip.Text = "menuStrip1";
-            // 
-            // logoImage
-            // 
-            this.logoImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoImage.Image = global::SmartRead.WinUI.Properties.Resources.SmartReadLogo;
-            this.logoImage.Location = new System.Drawing.Point(0, 24);
-            this.logoImage.Name = "logoImage";
-            this.logoImage.Size = new System.Drawing.Size(882, 486);
-            this.logoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logoImage.TabIndex = 3;
-            this.logoImage.TabStop = false;
             // 
             // kategorijeToolStripMenuItem
             // 
@@ -82,6 +71,7 @@ namespace SmartRead.WinUI.Forms
             this.dodajKategorijuToolStripMenuItem.Name = "dodajKategorijuToolStripMenuItem";
             this.dodajKategorijuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dodajKategorijuToolStripMenuItem.Text = "Dodaj Kategoriju";
+            this.dodajKategorijuToolStripMenuItem.Click += new System.EventHandler(this.dodajKategorijuToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -89,6 +79,17 @@ namespace SmartRead.WinUI.Forms
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
+            // logoImage
+            // 
+            this.logoImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logoImage.Image = global::SmartRead.WinUI.Properties.Resources.SmartReadLogo;
+            this.logoImage.Location = new System.Drawing.Point(0, 24);
+            this.logoImage.Name = "logoImage";
+            this.logoImage.Size = new System.Drawing.Size(882, 486);
+            this.logoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoImage.TabIndex = 3;
+            this.logoImage.TabStop = false;
             // 
             // MainForm
             // 
