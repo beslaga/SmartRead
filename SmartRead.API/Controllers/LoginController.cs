@@ -16,7 +16,7 @@ namespace SmartRead.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Model.Korisnik>> Login([FromBody] Model.Requests.LoginRequest request)
+        public async Task<Model.Korisnik> Login([FromBody] Model.Requests.LoginRequest request)
         {
             return await _service.Autentifikacija(request.username, request.password);
         }

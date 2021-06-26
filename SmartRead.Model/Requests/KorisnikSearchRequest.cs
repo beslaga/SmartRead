@@ -1,6 +1,7 @@
 ﻿namespace SmartRead.Model
 {
-    public interface KorisnikSearchRequest
+    public class KorisnikSearchRequest
     {
+        public string Username { get; set; }
     }
 }

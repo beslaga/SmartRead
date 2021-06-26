@@ -15,6 +15,7 @@ namespace SmartRead.API.Mapper
             CreateMap<KorisnikPrijava, Model.KorisnikPrijava>();
             CreateMap<Uplata, Model.Uplata>();
             CreateMap<Uloga, Model.Uloga>();
+            CreateMap<KorisnikUloga, Model.KorisnikUloga>();
 
             CreateMap<Kategorija, Model.Requests.KategorijaUpsertRequest>().ReverseMap();
         }
