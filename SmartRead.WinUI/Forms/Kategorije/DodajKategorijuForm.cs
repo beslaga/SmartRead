@@ -1,4 +1,5 @@
-﻿using SmartRead.WinUI.Helpers;
+﻿using SmartRead.Model.Requests;
+using SmartRead.WinUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,8 @@ namespace SmartRead.WinUI.Forms.Kategorije
             {
                 nameTextBox.Text = kategorija.Naziv;
                 obrisanCheckBox.Checked = kategorija.Obrisan;
-            } else
+            } 
+            else
             {
                 obrisanCheckBox.Hide();
             }
@@ -48,10 +50,22 @@ namespace SmartRead.WinUI.Forms.Kategorije
             Model.Kategorija novaKategorija;
             if (isEditing && kategorija != null)
             {
-                novaKategorija = await _service.Update<Model.Kategorija>((int)kategorija.Id, new Model.Requests.KategorijaUpsertRequest { Naziv = nameTextBox.Text});
-            } else
+                novaKategorija = await _service.Update<Model.Kategorija>(kategorija.Id, 
+                    new KategorijaUpsertRequest 
+                    { 
+                        Naziv = nameTextBox.Text,
+                        Obrisan = obrisanCheckBox.Checked
+                    });
+            } 
+            else
             {
-                novaKategorija = await _service.Insert<Model.Kategorija>(nameTextBox.Text);
+                novaKategorija = await _service.Insert<Model.Kategorija>(
+                    new KategorijaUpsertRequest 
+                    { 
+                        Naziv = nameTextBox.Text,
+                        Obrisan = false
+                    }
+                );
             }
 
             if (novaKategorija != null)

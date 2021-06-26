@@ -86,7 +86,8 @@ namespace SmartRead.WinUI.Forms
 
         private void dodajKategorijuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var form = new DodajKategorijuForm(false);
+            form.ShowDialog();
         }
     }
 }

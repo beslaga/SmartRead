@@ -34,7 +34,7 @@ namespace SmartRead.WinUI.Forms.Kategorije
 
         }
 
-        private async void buttonDodaj_Click(object sender, System.EventArgs e)
+        private void buttonDodaj_Click(object sender, System.EventArgs e)
         {
             var form = new DodajKategorijuForm(false);
 
