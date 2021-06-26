@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace SmartRead.API.Extensions
+namespace SmartRead.API.Helpers
 {
     public static class HttpContextExtensions
     {
