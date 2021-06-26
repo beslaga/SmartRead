@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartRead.API.Database.Context;
 
 namespace SmartRead.API.Migrations
 {
     [DbContext(typeof(SmartReadContext))]
-    partial class SmartReadContextModelSnapshot : ModelSnapshot
+    [Migration("20210626061816_seedData")]
+    partial class seedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -157,17 +159,15 @@ namespace SmartRead.API.Migrations
                         new
                         {
                             Id = 1,
-                            DatumRegistracije = new DateTime(2021, 6, 26, 8, 25, 5, 457, DateTimeKind.Local).AddTicks(9346),
+                            DatumRegistracije = new DateTime(2021, 6, 26, 8, 18, 16, 212, DateTimeKind.Local).AddTicks(8628),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Maid",
                             Kredit = 0.0,
-                            Mail = "maid.beslagic@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "zURw1NDtN/j7gT5jQrvE4Kazkys+Sh+YQT9dqX2/q4DaBfon/2U+Ho31PHo1oZQ6PVl4ZXZlTS9U2xmZN8cdaA==",
-                            PasswordSalt = "h6DPHA+fvIHN+cSZEkh10A==",
-                            Prezime = "Bešlagić",
-                            Username = "maid"
+                            PasswordHash = "r1hjPqyvtGvfjeV94PppEqdXkfJUrtU1kJj9vXjfKxDJXwJfV+d8zAm4BuI3Ic3Bu66/6URSquY0sr6J+dZ4YA==",
+                            PasswordSalt = "Bln2+IqQ3fvkRXDd9bI2BA==",
+                            Prezime = "Bešlagić"
                         });
                 });
 

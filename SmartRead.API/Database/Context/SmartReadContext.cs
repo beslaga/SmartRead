@@ -32,12 +32,14 @@ namespace SmartRead.API.Database.Context
                 .HasOne(o => o.Autor)
                 .WithMany(o => o.Clanci);
 
-            modelBuilder.Model.GetEntityTypes()
-                .SelectMany(e => e.GetForeignKeys())
-                .ToList()
-                .ForEach(r => r.DeleteBehavior = DeleteBehavior.Restrict);
+            //modelBuilder.Model.GetEntityTypes()
+            //    .SelectMany(e => e.GetForeignKeys())
+            //    .ToList()
+            //    .ForEach(r => r.DeleteBehavior = DeleteBehavior.Restrict);
 
-            base.OnModelCreating(modelBuilder);
+            OnModelCreatingPartial(modelBuilder);
         }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
