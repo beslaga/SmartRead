@@ -33,7 +33,6 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.Naslov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Odobren = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Odbijen = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,8 +42,7 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Naslov,
             this.Cijena,
-            this.Odobren,
-            this.Odbijen});
+            this.Odobren});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(775, 316);
@@ -57,7 +55,7 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.Naslov.HeaderText = "Naslov";
             this.Naslov.Name = "Naslov";
             this.Naslov.ReadOnly = true;
-            this.Naslov.Width = 430;
+            this.Naslov.Width = 535;
             // 
             // Cijena
             // 
@@ -73,13 +71,6 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.Odobren.Name = "Odobren";
             this.Odobren.ReadOnly = true;
             // 
-            // Odbijen
-            // 
-            this.Odbijen.DataPropertyName = "Odbijen";
-            this.Odbijen.HeaderText = "Odbijen";
-            this.Odbijen.Name = "Odbijen";
-            this.Odbijen.ReadOnly = true;
-            // 
             // ClanciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +79,7 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.Controls.Add(this.dataGridView1);
             this.Name = "ClanciForm";
             this.Text = "ClanciForm";
+            this.Load += new System.EventHandler(this.ClanciForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -99,6 +91,5 @@ namespace SmartRead.WinUI.Forms.Clanci
         private System.Windows.Forms.DataGridViewTextBoxColumn Naslov;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Odobren;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Odbijen;
     }
 }

@@ -46,6 +46,8 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.errorProviderNaslov = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderSadrzaj = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbImage = new System.Windows.Forms.PictureBox();
+            this.btnOdobri = new System.Windows.Forms.Button();
+            this.btnOdbij = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numCijena)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNaslov)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSadrzaj)).BeginInit();
@@ -202,11 +204,33 @@ namespace SmartRead.WinUI.Forms.Clanci
             this.pbImage.TabIndex = 30;
             this.pbImage.TabStop = false;
             // 
+            // btnOdobri
+            // 
+            this.btnOdobri.Location = new System.Drawing.Point(268, 870);
+            this.btnOdobri.Name = "btnOdobri";
+            this.btnOdobri.Size = new System.Drawing.Size(188, 23);
+            this.btnOdobri.TabIndex = 91;
+            this.btnOdobri.Text = "Odobri";
+            this.btnOdobri.UseVisualStyleBackColor = true;
+            this.btnOdobri.Click += new System.EventHandler(this.btnOdobri_Click);
+            // 
+            // btnOdbij
+            // 
+            this.btnOdbij.Location = new System.Drawing.Point(490, 870);
+            this.btnOdbij.Name = "btnOdbij";
+            this.btnOdbij.Size = new System.Drawing.Size(188, 23);
+            this.btnOdbij.TabIndex = 92;
+            this.btnOdbij.Text = "Odbij";
+            this.btnOdbij.UseVisualStyleBackColor = true;
+            this.btnOdbij.Click += new System.EventHandler(this.btnOdbij_Click);
+            // 
             // DodajClanakForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 916);
+            this.Controls.Add(this.btnOdbij);
+            this.Controls.Add(this.btnOdobri);
             this.Controls.Add(this.lbKategorije);
             this.Controls.Add(this.lblGenres);
             this.Controls.Add(this.btnDodajKategoriju);
@@ -251,5 +275,7 @@ namespace SmartRead.WinUI.Forms.Clanci
         private System.Windows.Forms.ComboBox cbKategorija;
         private System.Windows.Forms.ErrorProvider errorProviderNaslov;
         private System.Windows.Forms.ErrorProvider errorProviderSadrzaj;
+        private System.Windows.Forms.Button btnOdbij;
+        private System.Windows.Forms.Button btnOdobri;
     }
 }

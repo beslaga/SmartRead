@@ -17,6 +17,22 @@ namespace SmartRead.API.Services
         {
         }
 
+        public override async Task<bool> Delete(int id)
+        {
+            var entity = await _context.Clanci.FindAsync(id);
+
+            if (entity != null)
+            {
+                entity.Obrisan = true;
+
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
+        }
+
         public override async Task<List<Clanak>> Get(ClanakSearchRequest search)
         {
             var list = await _context.Set<Database.Clanak>()
@@ -48,6 +64,41 @@ namespace SmartRead.API.Services
             await _context.SaveChangesAsync();
 
             return _mapper.Map<Clanak>(entity);
+        }
+
+        public async Task<Clanak> Odbij(int clanakId, int adminId)
+        {
+            var entity = await _context.Clanci.FindAsync(clanakId);
+
+            if (entity != null)
+            {
+                entity.Odobren = false;
+                entity.OdobravateljId = adminId;
+
+                await _context.SaveChangesAsync();
+
+                return _mapper.Map<Clanak>(entity);
+            }
+
+            return null;
+
+        }
+
+        public async Task<Clanak> Odobri(int clanakId, int adminId)
+        {
+            var entity = await _context.Clanci.FindAsync(clanakId);
+
+            if (entity != null)
+            {
+                entity.Odobren = true;
+                entity.OdobravateljId = adminId;
+
+                await _context.SaveChangesAsync();
+
+                return _mapper.Map<Clanak>(entity);
+            }
+
+            return null;
         }
 
         public override async Task<Clanak> Update(int id, ClanakUpdateRequest request)

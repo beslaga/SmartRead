@@ -10,7 +10,6 @@ namespace SmartRead.WinUI.Forms
 {
     public partial class MainForm : Form
     {
-        private readonly APIService _clanakApiService = new APIService("clanak");
         public MainForm()
         {
             InitializeComponent();
@@ -100,10 +99,9 @@ namespace SmartRead.WinUI.Forms
             form.ShowDialog();
         }
 
-        private async void članciToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void članciToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            var clanci = await _clanakApiService.Get<List<Clanak>>();
-            var form = new ClanciForm(clanci);
+            var form = new ClanciForm();
             this.IsMdiContainer = true;
             CloseLatestChild();
             form.ParentChanged += MdiFormParentChangedHandler; form.MdiParent = this;

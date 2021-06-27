@@ -13,7 +13,7 @@ namespace SmartRead.API.Helpers
                 return null;
             }
 
-            return Convert.ToInt32(httpContext.User.Claims.Single(x => x.Type == "id").Value);
+            return Convert.ToInt32(httpContext.User.Claims.Single(x => x.Type == "Id").Value);
         }
     }
 }

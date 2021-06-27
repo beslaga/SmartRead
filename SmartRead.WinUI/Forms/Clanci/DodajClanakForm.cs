@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartRead.WinUI.Forms.Clanci
@@ -138,6 +139,11 @@ namespace SmartRead.WinUI.Forms.Clanci
                     pbImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
+            else
+            {
+                btnOdbij.Hide();
+                btnOdobri.Hide();
+            }
         }
 
         private void btnDodajKategoriju_Click(object sender, EventArgs e)
@@ -154,6 +160,34 @@ namespace SmartRead.WinUI.Forms.Clanci
         {
             var kategorija = lbKategorije.SelectedItem;
             lbKategorije.Items.Remove(kategorija);
+        }
+
+        private async void btnOdobri_Click(object sender, EventArgs e)
+        {
+            var noviClanak = await _clanakApiService.Insert<Clanak>(null, $"{clanak.Id}/odobri");
+            if (noviClanak != null)
+            {
+                MessageBox.Show("Uspješno spašeno", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("GreŠka", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void btnOdbij_Click(object sender, EventArgs e)
+        {
+            var noviClanak = await _clanakApiService.Insert<Clanak>(null, $"{clanak.Id}/odbij");
+            if (noviClanak != null)
+            {
+                MessageBox.Show("Uspješno spašeno", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("GreŠka", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Naslov_Validating(object sender, CancelEventArgs e)
