@@ -9,6 +9,7 @@ namespace SmartRead.API.Database
         public Clanak()
         {
             Prijave = new HashSet<KorisnikPrijava>();
+            Kategorije = new HashSet<ClanakKategorija>();
         }
         [Key]
         public int Id { get; set; }
@@ -26,5 +27,6 @@ namespace SmartRead.API.Database
         public int? OdobravateljId { get; set; }
 
         public ICollection<KorisnikPrijava> Prijave { get; set; }
+        public ICollection<ClanakKategorija> Kategorije { get; set; }
     }
 }

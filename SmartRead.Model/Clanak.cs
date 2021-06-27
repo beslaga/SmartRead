@@ -16,5 +16,6 @@ namespace SmartRead.Model
         public Korisnik Odobravatelj { get; set; }
         public int? OdobravateljId { get; set; }
         public ICollection<KorisnikPrijava> Prijave { get; set; }
+        public ICollection<ClanakKategorija> Kategorije { get; set; }
     }
 }
