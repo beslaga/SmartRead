@@ -1,13 +1,16 @@
-﻿using SmartRead.WinUI.Forms.Clanci;
+﻿using SmartRead.Model;
+using SmartRead.WinUI.Forms.Clanci;
 using SmartRead.WinUI.Forms.Kategorije;
 using SmartRead.WinUI.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace SmartRead.WinUI.Forms
 {
     public partial class MainForm : Form
     {
+        private readonly APIService _clanakApiService = new APIService("clanak");
         public MainForm()
         {
             InitializeComponent();
@@ -95,6 +98,18 @@ namespace SmartRead.WinUI.Forms
         {
             var form = new DodajClanakForm();
             form.ShowDialog();
+        }
+
+        private async void članciToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var clanci = await _clanakApiService.Get<List<Clanak>>();
+            var form = new ClanciForm(clanci);
+            this.IsMdiContainer = true;
+            CloseLatestChild();
+            form.ParentChanged += MdiFormParentChangedHandler; form.MdiParent = this;
+            form.Show();
+            form.WindowState = FormWindowState.Minimized;
+            form.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -99,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Clanci\ClanciForm.resx">
+      <DependentUpon>ClanciForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clanci\DodajClanakForm.resx">
       <DependentUpon>DodajClanakForm.cs</DependentUpon>
     </EmbeddedResource>
