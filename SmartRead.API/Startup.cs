@@ -52,6 +52,8 @@ namespace SmartRead.API
             services.AddTransient<
                 ICrudService<Kategorija, KategorijaSearchRequest, KategorijaUpsertRequest, KategorijaUpsertRequest>,
                 CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>>();
+            
+            services.AddTransient<IClanakService, ClanakService>();
 
             services.AddTransient<IBaseService<Drzava, object>, BaseService<Drzava, object, Database.Drzava>>();
 

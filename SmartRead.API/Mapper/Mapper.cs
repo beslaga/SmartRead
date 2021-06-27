@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SmartRead.API.Database;
+using SmartRead.Model.Requests;
 
 namespace SmartRead.API.Mapper
 {
@@ -17,7 +18,8 @@ namespace SmartRead.API.Mapper
             CreateMap<Uloga, Model.Uloga>();
             CreateMap<KorisnikUloga, Model.KorisnikUloga>();
 
-            CreateMap<Kategorija, Model.Requests.KategorijaUpsertRequest>().ReverseMap();
+            CreateMap<Kategorija, KategorijaUpsertRequest>().ReverseMap();
+            CreateMap<ClanakInsertRequest, Clanak>().ReverseMap();
         }
     }
 }

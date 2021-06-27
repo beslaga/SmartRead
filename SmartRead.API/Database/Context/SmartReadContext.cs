@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace SmartRead.API.Database.Context
 {
@@ -17,6 +16,7 @@ namespace SmartRead.API.Database.Context
         public virtual DbSet<Uplata> Uplate { get; set; }
         public virtual DbSet<Uloga> Uloge { get; set; }
         public virtual DbSet<KorisnikUloga> KorisnikUloge { get; set; }
+        public virtual DbSet<ClanakKategorija> ClanakKategorije { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<KorisnikKategorija>()
@@ -27,6 +27,9 @@ namespace SmartRead.API.Database.Context
 
             modelBuilder.Entity<KorisnikUloga>()
                 .HasKey(o => new { o.KorisnikId, o.UlogaId });
+
+            modelBuilder.Entity<ClanakKategorija>()
+                .HasKey(o => new { o.ClanakId, o.KategorijaId });
 
             modelBuilder.Entity<Clanak>()
                 .HasOne(o => o.Autor)

@@ -1,4 +1,5 @@
-﻿using SmartRead.WinUI.Forms.Kategorije;
+﻿using SmartRead.WinUI.Forms.Clanci;
+using SmartRead.WinUI.Forms.Kategorije;
 using SmartRead.WinUI.Helpers;
 using System;
 using System.Windows.Forms;
@@ -87,6 +88,12 @@ namespace SmartRead.WinUI.Forms
         private void dodajKategorijuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new DodajKategorijuForm(false);
+            form.ShowDialog();
+        }
+
+        private void dodajČlanakToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new DodajClanakForm();
             form.ShowDialog();
         }
     }

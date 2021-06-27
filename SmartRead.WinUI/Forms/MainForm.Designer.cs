@@ -35,6 +35,8 @@ namespace SmartRead.WinUI.Forms
             this.dodajKategorijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoImage = new System.Windows.Forms.PictureBox();
+            this.članciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajČlanakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +45,7 @@ namespace SmartRead.WinUI.Forms
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kategorijeToolStripMenuItem,
+            this.članciToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -91,6 +94,21 @@ namespace SmartRead.WinUI.Forms
             this.logoImage.TabIndex = 3;
             this.logoImage.TabStop = false;
             // 
+            // članciToolStripMenuItem
+            // 
+            this.članciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dodajČlanakToolStripMenuItem});
+            this.članciToolStripMenuItem.Name = "članciToolStripMenuItem";
+            this.članciToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.članciToolStripMenuItem.Text = "Članci";
+            // 
+            // dodajČlanakToolStripMenuItem
+            // 
+            this.dodajČlanakToolStripMenuItem.Name = "dodajČlanakToolStripMenuItem";
+            this.dodajČlanakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajČlanakToolStripMenuItem.Text = "Dodaj Članak";
+            this.dodajČlanakToolStripMenuItem.Click += new System.EventHandler(this.dodajČlanakToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,5 +134,7 @@ namespace SmartRead.WinUI.Forms
         private System.Windows.Forms.ToolStripMenuItem prikažiKategorijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajKategorijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem članciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajČlanakToolStripMenuItem;
     }
 }
