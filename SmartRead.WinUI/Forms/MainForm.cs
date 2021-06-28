@@ -1,6 +1,7 @@
 ﻿using SmartRead.Model;
 using SmartRead.WinUI.Forms.Clanci;
 using SmartRead.WinUI.Forms.Kategorije;
+using SmartRead.WinUI.Forms.Korisnici;
 using SmartRead.WinUI.Helpers;
 using System;
 using System.Collections.Generic;
@@ -102,6 +103,17 @@ namespace SmartRead.WinUI.Forms
         private void članciToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var form = new ClanciForm();
+            this.IsMdiContainer = true;
+            CloseLatestChild();
+            form.ParentChanged += MdiFormParentChangedHandler; form.MdiParent = this;
+            form.Show();
+            form.WindowState = FormWindowState.Minimized;
+            form.WindowState = FormWindowState.Maximized;
+        }
+
+        private void prikažiKorisnikeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new KorisniciForm();
             this.IsMdiContainer = true;
             CloseLatestChild();
             form.ParentChanged += MdiFormParentChangedHandler; form.MdiParent = this;

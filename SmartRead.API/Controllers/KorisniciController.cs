@@ -10,7 +10,7 @@ namespace SmartRead.API.Controllers
     {
         private readonly IKorisniciService _service;
 
-        public KorisniciController(IBaseService<Korisnik, KorisnikSearchRequest> service) : base(service)
+        public KorisniciController(IKorisniciService service) : base(service)
         {
         }
     }
