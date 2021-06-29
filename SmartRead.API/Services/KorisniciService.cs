@@ -5,6 +5,8 @@ using SmartRead.API.Helpers;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
@@ -36,6 +38,19 @@ namespace SmartRead.API.Services
             return null;
         }
 
+        public override async Task<List<Korisnik>> Get(KorisnikSearchRequest search)
+        {
+            var list = await _context.Set<Database.Korisnik>()
+                .AsNoTracking()
+                .Include(i => i.Uloge)
+                    .ThenInclude(i => i.Uloga)
+                .Include(i => i.Drzava)
+                .ToListAsync();
+
+
+            return _mapper.Map<List<Korisnik>>(list);
+        }
+
         public override async Task<Korisnik> Insert(KorisnikInsertRequest request)
         {
             if (request.Password != request.PasswordConfirmation)
@@ -45,7 +60,7 @@ namespace SmartRead.API.Services
 
             if (!await IsMailUnique(request.Mail))
             {
-                throw new UserException("Email je zauzet!");
+                throw new UserException("Mail je zauzet!");
             }
 
             if (!await IsUsernameUnique(request.Username))
@@ -83,6 +98,59 @@ namespace SmartRead.API.Services
         public async Task<bool> IsUsernameUnique(string Username)
         {
             return !await _context.Korisnici.AnyAsync(i => i.Username == Username);
+        }
+
+        public override async Task<Korisnik> Update(int id, KorisnikUpdateRequest request)
+        {
+            var entity = await _context.Korisnici.FindAsync(id);
+
+            if (entity.Mail != request.Mail && await IsMailUnique(request.Mail) == false)
+            {
+                throw new UserException("Mail je zauzet!");
+            }
+
+            if (entity.Username != request.Username && await IsUsernameUnique(request.Username) == false)
+            {
+                throw new UserException("Username je zauzet!");
+            }
+
+            _context.Korisnici.Attach(entity);
+            _context.Korisnici.Update(entity);
+
+            foreach (var ulogaId in request.Uloge)
+            {
+                var uloga = await _context.KorisnikUloge
+                    .Where(i => i.UlogaId == ulogaId && i.KorisnikId == id)
+                    .SingleOrDefaultAsync();
+
+                if (uloga == null)
+                {
+                    var novaUloga = new Database.KorisnikUloga
+                    {
+                        KorisnikId = id,
+                        UlogaId = ulogaId
+                    };
+                    await _context.Set<Database.KorisnikUloga>().AddAsync(novaUloga);
+                }
+            }
+
+
+            foreach (var ulogaId in request.UlogeZaObrisati)
+            {
+                var uloga = await _context.KorisnikUloge
+                    .Where(i => i.UlogaId == ulogaId && i.KorisnikId == id)
+                    .SingleOrDefaultAsync();
+
+                if (uloga != null)
+                {
+                    _context.Set<Database.KorisnikUloga>().Remove(uloga);
+                }
+            }
+
+            _mapper.Map(request, entity);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<Korisnik>(entity);
         }
     }
 }

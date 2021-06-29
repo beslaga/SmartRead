@@ -1,4 +1,5 @@
-﻿using SmartRead.WinUI.Helpers;
+﻿using SmartRead.Model;
+using SmartRead.WinUI.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,19 @@ namespace SmartRead.WinUI.Forms.Korisnici
         private async void KorisniciForm_Load(object sender, EventArgs e)
         {
             await getData();
+        }
+
+        private async void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var korisnik = (dataGridView1.DataSource as List<Korisnik>)[e.RowIndex];
+            if (korisnik != null)
+            {
+                var form = new UrediKorisnikaForm(korisnik);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    await getData();
+                }
+            }
         }
     }
 }

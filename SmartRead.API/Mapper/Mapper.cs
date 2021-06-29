@@ -26,7 +26,8 @@ namespace SmartRead.API.Mapper
             CreateMap<KorisnikInsertRequest, Korisnik>()
                 .ForMember(dest => dest.Uloge, opt => opt.Ignore());
 
-
+            CreateMap<KorisnikUpdateRequest, Korisnik>()
+                .ForMember(dest => dest.Uloge, opt => opt.Ignore());
         }
     }
 }
