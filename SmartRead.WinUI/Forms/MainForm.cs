@@ -121,5 +121,11 @@ namespace SmartRead.WinUI.Forms
             form.WindowState = FormWindowState.Minimized;
             form.WindowState = FormWindowState.Maximized;
         }
+
+        private void dodajKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new DodajKorisnikaForm();
+            form.Show();
+        }
     }
 }

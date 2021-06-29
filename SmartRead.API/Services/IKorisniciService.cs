@@ -1,9 +1,10 @@
 ﻿using SmartRead.Model;
+using SmartRead.Model.Requests;
 using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
 {
-    public interface IKorisniciService : IBaseService<Korisnik, KorisnikSearchRequest>
+    public interface IKorisniciService : ICrudService<Korisnik, KorisnikSearchRequest, KorisnikInsertRequest, KorisnikUpdateRequest>
     {
         Task<Korisnik> Autentifikacija(string username, string password);
     }

@@ -58,6 +58,7 @@ namespace SmartRead.API
             services.AddTransient<IBaseService<Drzava, object>, BaseService<Drzava, object, Database.Drzava>>();
 
             services.AddTransient<IKorisniciService, KorisniciService>();
+            services.AddTransient<IBaseService<Uloga, object>, UlogaService>();
             
             services.AddRouting(options => options.LowercaseUrls = true);
 

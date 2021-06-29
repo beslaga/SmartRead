@@ -115,7 +115,7 @@ namespace SmartRead.WinUI.Helpers
                 }
                 return default(T);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return default(T);
 

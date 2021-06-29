@@ -23,6 +23,9 @@ namespace SmartRead.API.Mapper
             CreateMap<ClanakInsertRequest, Clanak>().ReverseMap();
             CreateMap<ClanakUpdateRequest, Clanak>()
                 .ForMember(dest => dest.Kategorije, opt => opt.Ignore());
+            CreateMap<KorisnikInsertRequest, Korisnik>()
+                .ForMember(dest => dest.Uloge, opt => opt.Ignore());
+
 
         }
     }

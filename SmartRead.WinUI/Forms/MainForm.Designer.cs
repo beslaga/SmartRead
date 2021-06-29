@@ -143,6 +143,7 @@ namespace SmartRead.WinUI.Forms
             this.dodajKorisnikaToolStripMenuItem.Name = "dodajKorisnikaToolStripMenuItem";
             this.dodajKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dodajKorisnikaToolStripMenuItem.Text = "Dodaj Korisnika";
+            this.dodajKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.dodajKorisnikaToolStripMenuItem_Click);
             // 
             // MainForm
             // 
