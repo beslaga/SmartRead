@@ -100,6 +100,34 @@ namespace SmartRead.API.Services
             return !await _context.Korisnici.AnyAsync(i => i.Username == Username);
         }
 
+        public async Task<PasswordReset> ResetPassword(int id)
+        {
+            var entity = await _context.Korisnici.FindAsync(id);
+
+            if (entity != null)
+            {
+                var newPassword = GeneratePassword(16);
+                entity.PasswordSalt = HashHelper.GenerateSalt();
+                entity.PasswordHash = HashHelper.GenerateHash(entity.PasswordSalt, newPassword);
+
+                await _context.SaveChangesAsync();
+                return new PasswordReset
+                {
+                    Password = newPassword
+                };
+            }
+
+            return null;
+        }
+
+        private string GeneratePassword(int length)
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
+
         public override async Task<Korisnik> Update(int id, KorisnikUpdateRequest request)
         {
             var entity = await _context.Korisnici.FindAsync(id);

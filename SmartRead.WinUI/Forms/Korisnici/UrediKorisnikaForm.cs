@@ -63,9 +63,11 @@ namespace SmartRead.WinUI.Forms.Korisnici
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private async void btnReset_Click(object sender, EventArgs e)
         {
-
+            var password = await _korisnikService.Insert<PasswordReset>(null, korisnik.Id + "/reset-password");
+            MessageBox.Show($"Novi password {password.Password}", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult = DialogResult.OK;
         }
 
         private async void btnDelete_Click(object sender, EventArgs e)
