@@ -1,15 +1,14 @@
-﻿using System;
-using System.ComponentModel;
+﻿using SmartRead.Mobile.Models;
+using SmartRead.Mobile.ViewModels;
+using SmartRead.Mobile.Views;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using SmartRead.Mobile.Models;
-using SmartRead.Mobile.Views;
-using SmartRead.Mobile.ViewModels;
 
 namespace SmartRead.Mobile.Views
 {

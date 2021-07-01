@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SmartRead.Mobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SmartRead.Mobile.Models;
 
 namespace SmartRead.Mobile.Services
 {

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SmartRead.Mobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using SmartRead.Mobile.Models;
 using Xamarin.Forms;
 
 namespace SmartRead.Mobile.ViewModels

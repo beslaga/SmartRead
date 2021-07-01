@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SmartRead.Mobile.Services;
+using SmartRead.Mobile.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using SmartRead.Mobile.Services;
-using SmartRead.Mobile.Views;
 
 namespace SmartRead.Mobile
 {

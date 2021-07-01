@@ -1,12 +1,10 @@
-﻿using System;
+﻿using SmartRead.Mobile.Models;
+using SmartRead.Mobile.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
-using SmartRead.Mobile.Models;
-using SmartRead.Mobile.Services;
 
 namespace SmartRead.Mobile.ViewModels
 {

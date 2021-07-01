@@ -1,7 +1,7 @@
-﻿using System;
+﻿using SmartRead.Mobile.Models;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using SmartRead.Mobile.Models;
 using Xamarin.Forms;
 
 namespace SmartRead.Mobile.ViewModels
