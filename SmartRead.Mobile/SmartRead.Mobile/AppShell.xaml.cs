@@ -14,6 +14,7 @@ namespace SmartRead.Mobile
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(ClanakDetaljiPage), typeof(ClanakDetaljiPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            CurrentItem = new LoginPage();
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
