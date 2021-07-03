@@ -12,6 +12,7 @@ namespace SmartRead.Mobile
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+            Routing.RegisterRoute(nameof(ClanakDetaljiPage), typeof(ClanakDetaljiPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }
 

@@ -45,6 +45,19 @@ namespace SmartRead.API.Services
             return _mapper.Map<List<Clanak>>(list);
         }
 
+        public override async Task<Clanak> GetById(int id)
+        {
+            var list = await _context.Set<Database.Clanak>()
+               .AsNoTracking()
+               .Include(i => i.Kategorije)
+               .ThenInclude(i => i.Kategorija)
+               .Include(i => i.Autor)
+               .Where(i => i.Id == id)
+               .SingleOrDefaultAsync();
+
+            return _mapper.Map<Clanak>(list);
+        }
+
         public override async Task<Clanak> Insert(ClanakInsertRequest request)
         {
             var entity = _mapper.Map<Database.Clanak>(request);

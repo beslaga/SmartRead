@@ -1,17 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:vm="clr-namespace:SmartRead.Mobile.ViewModels"
+             xmlns:vm="clr-namespace:SmartRead.Mobile.ViewModels" 
+             xmlns:converters="clr-namespace:SmartRead.Mobile.Converters"
              x:Class="SmartRead.Mobile.Views.ClanakDetaljiPage">
+    
     <ContentPage.BindingContext>
         <vm:ClanakDetaljiViewModel />
     </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImgConverter"></converters:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView VerticalOptions="FillAndExpand">
+                    <Image 
+                        Source="{Binding Slika, Converter={StaticResource ImgConverter}}" 
+                        VerticalOptions="Center" HeightRequest="200" Aspect="AspectFill" WidthRequest="450"
+                    ></Image>
+                </ContentView>
+            </StackLayout>
         </StackLayout>
-    </ContentPage.Content>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="{Binding Naslov}" FontSize="Title"/>
+                <Label Text="{Binding Sadrzaj}" FontSize="Body"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+    
 </ContentPage>

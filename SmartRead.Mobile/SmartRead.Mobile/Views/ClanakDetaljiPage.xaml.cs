@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartRead.Mobile.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace SmartRead.Mobile.Views
         public ClanakDetaljiPage()
         {
             InitializeComponent();
+            BindingContext = new ClanakDetaljiViewModel();
         }
     }
 }
