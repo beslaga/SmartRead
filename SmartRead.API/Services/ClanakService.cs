@@ -39,6 +39,7 @@ namespace SmartRead.API.Services
                .AsNoTracking()
                .Include(i => i.Kategorije)
                .ThenInclude(i => i.Kategorija)
+               .Include(i => i.Autor)
                .ToListAsync();
 
             return _mapper.Map<List<Clanak>>(list);
