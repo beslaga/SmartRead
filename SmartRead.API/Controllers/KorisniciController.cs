@@ -17,6 +17,19 @@ namespace SmartRead.API.Controllers
             _service = service;
         }
 
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(KorisnikInsertRequest request)
+        {
+            var response = await _service.Insert(request);
+
+            if(response != null)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest();
+        }
+
         [HttpPost("{id}/reset-password")]
         public async Task<IActionResult> ResetPassword(int id)
         {

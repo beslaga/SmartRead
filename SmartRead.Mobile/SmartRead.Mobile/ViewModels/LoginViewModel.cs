@@ -11,6 +11,8 @@ namespace SmartRead.Mobile.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         public Command LoginCommand { get; }
+        public Command RegisterCommand { get; }
+
         private readonly APIService _serviceLogin = new APIService("login");
 
         string username;
@@ -30,12 +32,16 @@ namespace SmartRead.Mobile.ViewModels
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
+            RegisterCommand = new Command(OnRegisterClicked);
+        }
+
+        private async void OnRegisterClicked(object obj)
+        {
+            await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
         }
 
         private async void OnLoginClicked(object obj)
         {
-            
-
             APIService.PrijavljeniKorisnik = await _serviceLogin.Insert<Model.Korisnik>(new Model.Requests.LoginRequest { username = Username, password = Password });
             
             if (APIService.PrijavljeniKorisnik == null)
