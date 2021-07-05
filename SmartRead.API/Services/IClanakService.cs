@@ -8,5 +8,7 @@ namespace SmartRead.API.Services
     {
         Task<Clanak> Odobri(int clanakId, int adminId);
         Task<Clanak> Odbij(int clanakId, int adminId);
+        Task<Like> Like(int clanakId, int korisnikId);
+        Task<bool> Dislike(int clanakId, int korisnikId);
     }
 }

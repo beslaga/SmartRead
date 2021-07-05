@@ -33,6 +33,8 @@ namespace SmartRead.API.Services
             return false;
         }
 
+        
+
         public override async Task<List<Clanak>> Get(ClanakSearchRequest search)
         {
             var list = await _context.Set<Database.Clanak>()
@@ -78,6 +80,37 @@ namespace SmartRead.API.Services
             await _context.SaveChangesAsync();
 
             return _mapper.Map<Clanak>(entity);
+        }
+
+        public async Task<Like> Like(int clanakId, int korisnikId)
+        {
+            var like = await _context.Likes.FindAsync(korisnikId, clanakId);
+
+            if (like == null)
+            {
+                var newLike = new Database.Like { KorisnikId = korisnikId, ClanakId = clanakId };
+                await _context.Likes.AddAsync(newLike);
+                await _context.SaveChangesAsync();
+
+                return _mapper.Map<Like>(newLike);
+            }
+
+            return null;
+        }
+
+        public async Task<bool> Dislike(int clanakId, int korisnikId)
+        {
+            var like = await _context.Likes.FindAsync(korisnikId, clanakId);
+
+            if (like != null)
+            {
+                _context.Likes.Remove(like);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
         }
 
         public async Task<Clanak> Odbij(int clanakId, int adminId)

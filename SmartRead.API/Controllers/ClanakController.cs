@@ -56,5 +56,44 @@ namespace SmartRead.API.Controllers
 
             return NotFound();
         }
+
+        [HttpPost("{id}/like")]
+        [Authorize]
+        public async Task<IActionResult> Like(int id)
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.Like(id, (int)korisnikId);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return NoContent();
+        }
+
+        [HttpPost("{id}/dislike")]
+        [Authorize]
+        public async Task<IActionResult> Disike(int id)
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.Dislike(id, (int)korisnikId);
+            if (response)
+            {
+                return Ok(response);
+            }
+
+            return NoContent();
+        }
+
     }
 }

@@ -17,6 +17,7 @@ namespace SmartRead.API.Database.Context
         public virtual DbSet<Uloga> Uloge { get; set; }
         public virtual DbSet<KorisnikUloga> KorisnikUloge { get; set; }
         public virtual DbSet<ClanakKategorija> ClanakKategorije { get; set; }
+        public virtual DbSet<Like> Likes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<KorisnikKategorija>()
@@ -30,6 +31,9 @@ namespace SmartRead.API.Database.Context
 
             modelBuilder.Entity<ClanakKategorija>()
                 .HasKey(o => new { o.ClanakId, o.KategorijaId });
+
+            modelBuilder.Entity<Like>()
+                .HasKey(o => new { o.KorisnikId, o.ClanakId });
 
             modelBuilder.Entity<Clanak>()
                 .HasOne(o => o.Autor)

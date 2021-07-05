@@ -22,6 +22,7 @@ namespace SmartRead.Model
         public ICollection<KorisnikKategorija> PretplaceneKategorije { get; set; }
         public ICollection<KorisnikPrijava> PrijavljeniClanci { get; set; }
         public ICollection<KorisnikUloga> Uloge { get; set; }
+        public ICollection<Like> Likes { get; set; }
 
     }
 }

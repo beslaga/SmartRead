@@ -10,6 +10,7 @@ namespace SmartRead.API.Mapper
         {
             CreateMap<Clanak, Model.Clanak>();
             CreateMap<Drzava, Model.Drzava>();
+            CreateMap<Like, Model.Like>();
             CreateMap<Kategorija, Model.Kategorija>();
             CreateMap<Korisnik, Model.Korisnik>();
             CreateMap<KorisnikKategorija, Model.KorisnikKategorija>();
