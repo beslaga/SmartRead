@@ -182,5 +182,16 @@ namespace SmartRead.API.Services
 
             return _mapper.Map<Korisnik>(entity);
         }
+
+        public async Task<List<Clanak>> Likes(int id)
+        {
+            var list = await _context.Likes
+                .Include(i => i.Clanak)
+                .Where(i => i.KorisnikId == id)
+                .Select(i => i.Clanak)
+                .ToListAsync();
+
+            return _mapper.Map<List<Clanak>>(list);
+        }
     }
 }

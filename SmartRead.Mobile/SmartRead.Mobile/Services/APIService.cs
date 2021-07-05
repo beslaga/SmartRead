@@ -25,9 +25,13 @@ namespace SmartRead.Mobile.Services
             _route = route;
         }
 
-        public async Task<T> Get<T>(object search)
+        public async Task<T> Get<T>(object search, string action = null)
         {
             var url = $"{APIUrl}/{_route}";
+            if (action != null)
+            {
+                url += $"/{action}";
+            }
 
             if (search != null)
             {

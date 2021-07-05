@@ -1,5 +1,6 @@
 ﻿using SmartRead.Model;
 using SmartRead.Model.Requests;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SmartRead.API.Services
@@ -8,5 +9,6 @@ namespace SmartRead.API.Services
     {
         Task<Korisnik> Autentifikacija(string username, string password);
         Task<PasswordReset> ResetPassword(int id);
+        Task<List<Clanak>> Likes(int id);
     }
 }

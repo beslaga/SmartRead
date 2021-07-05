@@ -42,5 +42,12 @@ namespace SmartRead.API.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet("{id}/likes")]
+        public async Task<IActionResult> GetLikes(int id)
+        {
+            var response = await _service.Likes(id);
+            return Ok(response);
+        }
     }
 }

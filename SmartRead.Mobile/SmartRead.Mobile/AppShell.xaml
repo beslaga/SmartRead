@@ -85,7 +85,7 @@
         <ShellContent Route="KategorijePage" ContentTemplate="{DataTemplate local:KategorijePage}" />
     </FlyoutItem>
     <FlyoutItem Title="Favoriti">
-        <ShellContent Route="KategorijePage" ContentTemplate="{DataTemplate local:KategorijePage}" />
+        <ShellContent Route="FavoritiPage" ContentTemplate="{DataTemplate local:FavoritiPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Novi Članak">
         <ShellContent Route="NoviClanakPage" ContentTemplate="{DataTemplate local:NoviClanakPage}" />
