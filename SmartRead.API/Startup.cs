@@ -10,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using SmartRead.API.Database.Context;
 using SmartRead.API.Security;
 using SmartRead.API.Services;
+using SmartRead.API.Stripe;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -59,7 +60,15 @@ namespace SmartRead.API
 
             services.AddTransient<IKorisniciService, KorisniciService>();
             services.AddTransient<IBaseService<Uloga, object>, UlogaService>();
-            
+
+
+            var stripeOptions = Configuration
+                .GetSection("Stripe")
+                .Get<StripeOptions>();
+            services.AddSingleton(stripeOptions);
+
+            services.AddTransient<IStripeService, StripeService>();
+
             services.AddRouting(options => options.LowercaseUrls = true);
 
             services.AddSwaggerGen(c =>

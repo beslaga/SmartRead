@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SmartRead.API.Helpers;
 using SmartRead.API.Services;
+using SmartRead.API.Stripe;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
 using System.Threading.Tasks;
@@ -11,10 +13,12 @@ namespace SmartRead.API.Controllers
     public class KorisniciController : CrudController<Korisnik, KorisnikSearchRequest, KorisnikInsertRequest, KorisnikUpdateRequest>
     {
         private readonly IKorisniciService _service;
+        private readonly IStripeService _stripeService;
 
-        public KorisniciController(IKorisniciService service) : base(service)
+        public KorisniciController(IKorisniciService service, IStripeService stripeService) : base(service)
         {
             _service = service;
+            _stripeService = stripeService;
         }
 
         [HttpPost("register")]
@@ -48,6 +52,24 @@ namespace SmartRead.API.Controllers
         {
             var response = await _service.Likes(id);
             return Ok(response);
+        }
+
+        [HttpPost("kredit")]
+        public async Task<IActionResult> KupiKredit(UplataRequest request)
+        {
+            var id = HttpContext.GetUserId();
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _stripeService.KupiKredit((int)id, request);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return NotFound();
         }
     }
 }
