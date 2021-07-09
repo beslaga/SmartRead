@@ -39,8 +39,8 @@ namespace SmartRead.API.Stripe
                 Card = new TokenCardOptions
                 {
                     Number = request.BrojKartice,
-                    ExpMonth = request.DatumIsteka.Month,
-                    ExpYear = request.DatumIsteka.Year,
+                    ExpMonth = request.MjesecIsteka,
+                    ExpYear = request.GodinaIsteka,
                     Cvc = request.Cvc,
                 },
             };
@@ -71,7 +71,7 @@ namespace SmartRead.API.Stripe
                 await _context.Uplate.AddAsync(uplata);
                 await _context.SaveChangesAsync();
 
-                korisnik.Kredit = (float)(request.IznosUplate / 100);
+                korisnik.Kredit += (float)(request.IznosUplate / 100);
                 await _context.SaveChangesAsync();
 
                 return _mapper.Map<Uplata>(uplata);

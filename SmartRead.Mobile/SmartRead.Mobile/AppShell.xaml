@@ -90,6 +90,9 @@
     <FlyoutItem Title="Novi Članak">
         <ShellContent Route="NoviClanakPage" ContentTemplate="{DataTemplate local:NoviClanakPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Kredit">
+        <ShellContent Route="KreditPage" ContentTemplate="{DataTemplate local:KreditPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Browse" >
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartRead.Mobile.Views.KreditPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Label Text="Broj Kartice"/>
+            <Entry Text="{Binding BrojKartice}">
+            </Entry>
+            <Label Text="CVC"/>
+            <Entry Text="{Binding Cvc}">
+            </Entry>
+            <Label Text="Mjesec Isteka"/>
+            <Entry Text="{Binding MjesecIsteka}">
+            </Entry>
+            <Label Text="Godina Isteka"/>
+            <Entry Text="{Binding GodinaIsteka}">
+            </Entry>
+            <Label Text="Iznos Uplate"/>
+            <Entry Text="{Binding IznosUplate}">
+            </Entry>
+            <Button VerticalOptions="Center" Text="Kupi Kredit" Command="{Binding KupiKreditCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
