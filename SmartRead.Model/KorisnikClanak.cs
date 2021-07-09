@@ -7,5 +7,7 @@
         public Korisnik Korisnik { get; set; }
         public Clanak Clanak { get; set; }
         public int BrojPosjeta { get; set; }
+        public bool Kupljen { get; set; }
+        public int Ocjena { get; set; }
     }
 }

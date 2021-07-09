@@ -11,5 +11,7 @@ namespace SmartRead.API.Database
         [ForeignKey(nameof(ClanakId))]
         public Clanak Clanak { get; set; }
         public int BrojPosjeta { get; set; }
+        public bool Kupljen { get; set; }
+        public int Ocjena { get; set; }
     }
 }

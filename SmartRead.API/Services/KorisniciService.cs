@@ -24,9 +24,10 @@ namespace SmartRead.API.Services
             var korisnik = await _context.Korisnici
                 .Include(x => x.Drzava)
                 .Include(i => i.Uloge)
-                .ThenInclude(i => i.Uloga)
+                    .ThenInclude(i => i.Uloga)
                 .Include(i => i.Likes)
-                .ThenInclude(i => i.Clanak)
+                    .ThenInclude(i => i.Clanak)
+                .Include(i => i.Clanci)
                 .FirstOrDefaultAsync(x => x.Username == username);
 
             if (korisnik != null)

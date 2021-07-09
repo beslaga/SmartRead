@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Bogus;
+using Microsoft.EntityFrameworkCore;
 using SmartRead.API.Helpers;
 using SmartRead.API.Security;
+using System.Collections.Generic;
 
 namespace SmartRead.API.Database.Context
 {
@@ -30,6 +32,28 @@ namespace SmartRead.API.Database.Context
                         DrzavaId = 1,
                         Username = "maid",
                         Mail = "maid.beslagic@edu.fit.ba"
+                    },
+                    new Korisnik
+                    {
+                        Id = 2,
+                        Ime = "Desktop",
+                        Prezime = "Admin",
+                        PasswordSalt = salt,
+                        PasswordHash = HashHelper.GenerateHash(salt, "test"),
+                        DrzavaId = 1,
+                        Username = "desktop",
+                        Mail = "desktop@edu.fit.ba"
+                    },
+                    new Korisnik
+                    {
+                        Id = 3,
+                        Ime = "Mobile",
+                        Prezime = "User",
+                        PasswordSalt = salt,
+                        PasswordHash = HashHelper.GenerateHash(salt, "test"),
+                        DrzavaId = 1,
+                        Username = "mobile",
+                        Mail = "mobile@edu.fit.ba"
                     }
                 );
 
@@ -44,8 +68,31 @@ namespace SmartRead.API.Database.Context
                 .HasData
                 (
                     new KorisnikUloga { KorisnikId = 1, UlogaId = 1},
-                    new KorisnikUloga { KorisnikId = 1, UlogaId = 2}
+                    new KorisnikUloga { KorisnikId = 1, UlogaId = 2},
+                    new KorisnikUloga { KorisnikId = 2, UlogaId = 1},
+                    new KorisnikUloga { KorisnikId = 3, UlogaId = 2}
                 );
+
+            var clanakFaker = new Faker<Clanak>()
+                .RuleFor(i => i.AutorId, 2)
+                .RuleFor(i => i.Naslov, i => i.Lorem.Sentence())
+                .RuleFor(i => i.OdobravateljId, i => 1)
+                .RuleFor(i => i.Text, i => i.Lorem.Text())
+                .RuleFor(i => i.Odobren, true)
+                .RuleFor(i => i.Cijena, i => i.Random.Double());
+
+
+            var clanci = new List<Clanak>();
+            for (int i = 1; i <= 50; i++)
+            {
+                var clanak = clanakFaker.Generate();
+                clanak.Id = i;
+                clanci.Add(clanak);
+            }
+
+            modelBuilder.Entity<Clanak>()
+                .HasData(clanci);
+
         }
     }
 }
