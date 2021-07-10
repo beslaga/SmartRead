@@ -19,6 +19,7 @@ namespace SmartRead.Model
         public Drzava Drzava { get; set; }
         public ICollection<Uplata> Uplate { get; set; }
         public ICollection<Clanak> Clanci { get; set; }
+        public ICollection<KorisnikClanak> KorisnikClanci { get; set; }
         public ICollection<KorisnikKategorija> PretplaceneKategorije { get; set; }
         public ICollection<KorisnikPrijava> PrijavljeniClanci { get; set; }
         public ICollection<KorisnikUloga> Uloge { get; set; }

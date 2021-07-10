@@ -235,5 +235,35 @@ namespace SmartRead.API.Services
 
             return _mapper.Map<List<Clanak>>(list);
         }
+
+        public async Task<KorisnikClanak> Ocijeni(int clanakId, int korisnikId, int ocjena)
+        {
+            var korisnikClanak = await _context.KorisnikClanci.FindAsync(korisnikId, clanakId);
+
+            if(korisnikClanak != null)
+            {
+                korisnikClanak.Ocjena = ocjena;
+            }
+            else
+            {
+                korisnikClanak = new Database.KorisnikClanak
+                {
+                    KorisnikId = korisnikId,
+                    ClanakId = clanakId,
+                    Ocjena = ocjena
+                };
+
+                await _context.AddAsync(korisnikClanak);
+            }
+
+            await _context.SaveChangesAsync();
+            return _mapper.Map<KorisnikClanak>(korisnikClanak);
+        }
+
+        public async Task<KorisnikClanak> GetOcjenu(int clanakId, int korisnikId)
+        {
+            var korisnikClanak = await _context.KorisnikClanci.FindAsync(korisnikId, clanakId);
+            return _mapper.Map<KorisnikClanak>(korisnikClanak);
+        }
     }
 }

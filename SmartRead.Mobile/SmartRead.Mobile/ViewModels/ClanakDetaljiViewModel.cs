@@ -1,7 +1,9 @@
-﻿using SmartRead.Mobile.Services;
+﻿using SmartRead.Mobile.Helpers;
+using SmartRead.Mobile.Services;
 using SmartRead.Model;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace SmartRead.Mobile.ViewModels
@@ -26,6 +28,13 @@ namespace SmartRead.Mobile.ViewModels
         {
             get => sadrzaj;
             set => SetProperty(ref sadrzaj, value);
+        }
+
+        private int ocjena;
+        public int Ocjena
+        {
+            get => ocjena;
+            set => SetProperty(ref ocjena, value);
         }
 
         public int Id
@@ -56,6 +65,9 @@ namespace SmartRead.Mobile.ViewModels
                 Naslov = item.Naslov;
                 Sadrzaj = item.Text;
                 Slika = item.Slika;
+
+                var korisnikClanak = await _clanakServis.Get<KorisnikClanak>(null, $"{Id}/ocjena");
+                Ocjena = korisnikClanak != null ? korisnikClanak.Ocjena : 0;
             }
             catch (Exception)
             {

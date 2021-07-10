@@ -5,7 +5,6 @@ namespace SmartRead.Mobile.Helpers
 {
     public class LikesHelper
     {
-        private readonly APIService _korisnikService = new APIService("korisnik");
         public static bool Remove(int id)
         {
             var itemToRemove = APIService.PrijavljeniKorisnik.Likes

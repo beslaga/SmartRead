@@ -15,6 +15,7 @@ namespace SmartRead.API.Database
             PrijavljeniClanci = new HashSet<KorisnikPrijava>();
             Uloge = new HashSet<KorisnikUloga>();
             Likes = new HashSet<Like>();
+            KorisnikClanci = new HashSet<KorisnikClanak>();
         }
 
         [Key]
@@ -40,5 +41,6 @@ namespace SmartRead.API.Database
         public ICollection<KorisnikPrijava> PrijavljeniClanci { get; set; }
         public ICollection<KorisnikUloga> Uloge { get; set; }
         public ICollection<Like> Likes { get; set; }
+        public ICollection<KorisnikClanak> KorisnikClanci { get; set; }
     }
 }

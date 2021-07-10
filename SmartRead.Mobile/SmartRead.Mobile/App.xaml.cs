@@ -11,6 +11,9 @@ namespace SmartRead.Mobile
 
         public App()
         {
+            string licenseKey = "NDcxOTMzQDMxMzkyZTMyMmUzMFhKMy9XZm93bTI2M0ZCclNwdnpYQTVSa09FdGlqMWFOQnZyV011eGNVbm89";
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(licenseKey);
+
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();

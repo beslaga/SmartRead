@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:vm="clr-namespace:SmartRead.Mobile.ViewModels" 
              xmlns:converters="clr-namespace:SmartRead.Mobile.Converters"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="SmartRead.Mobile.Views.ClanakDetaljiPage">
     
     <ContentPage.BindingContext>
@@ -30,6 +31,15 @@
                 </ContentView>
             </StackLayout>
         </StackLayout>
+        <rating:SfRating 
+                    Value="{Binding Ocjena}"
+                    Margin="0, 5"
+                    ItemCount="5"
+                    Precision="Standard"
+                    HorizontalOptions="Center"
+                    ValueChanged="Rating_ValueChanged"
+                />
+        
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
                 <Label Text="{Binding Naslov}" FontSize="Title"/>

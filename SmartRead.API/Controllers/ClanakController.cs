@@ -118,5 +118,33 @@ namespace SmartRead.API.Controllers
             var response = await _service.GetRecommended((int)korisnikId);
             return Ok(response);
         }
+
+        [HttpPost("{id}/ocijeni/{ocjena}")]
+        [Authorize]
+        public async Task<IActionResult> Ocijeni(int id, int ocjena)
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.Ocijeni(id, (int)korisnikId, ocjena);
+            return Ok(response);
+        }
+
+        [HttpGet("{id}/ocjena")]
+        [Authorize]
+        public async Task<IActionResult> GetOcijenu(int id)
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.GetOcjenu(id, (int)korisnikId);
+            return Ok(response);
+        }
     }
 }
