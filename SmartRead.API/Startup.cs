@@ -6,8 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.ML;
 using Microsoft.OpenApi.Models;
 using SmartRead.API.Database.Context;
+using SmartRead.API.Recommender;
+using SmartRead.API.Recommender.Models;
 using SmartRead.API.Security;
 using SmartRead.API.Services;
 using SmartRead.API.Stripe;
@@ -61,6 +64,10 @@ namespace SmartRead.API
             services.AddTransient<IKorisniciService, KorisniciService>();
             services.AddTransient<IBaseService<Uloga, object>, UlogaService>();
 
+            services.AddPredictionEnginePool<ClanakRating, ClanakRatingPrediction>()
+                .FromFile(modelName: "ClanakRatingAnalysisModel", filePath: "Recommender/Data/ClanakRecommenderModel.zip", watchForChanges: true);
+
+            services.AddTransient<IRecommender, Recommender.Recommender>();
 
             var stripeOptions = Configuration
                 .GetSection("Stripe")

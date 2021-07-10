@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using SmartRead.API.Database.Context;
+using SmartRead.API.Recommender;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,8 +15,10 @@ namespace SmartRead.API.Services
         CrudService<Clanak, ClanakSearchRequest, Database.Clanak, ClanakInsertRequest, ClanakUpdateRequest>,
         IClanakService
     {
-        public ClanakService(SmartReadContext context, IMapper mapper) : base(context, mapper)
+        private readonly IRecommender _recommender;
+        public ClanakService(SmartReadContext context, IMapper mapper, IRecommender recommender) : base(context, mapper)
         {
+            _recommender = recommender;
         }
 
         public override async Task<bool> Delete(int id)
@@ -192,6 +196,24 @@ namespace SmartRead.API.Services
             await _context.SaveChangesAsync();
 
             return _mapper.Map<Clanak>(entity);
+        }
+
+        public async Task<List<Clanak>> GetRecommended(int korisnikId)
+        {
+            var clanci = await _context.Clanci.ToListAsync();
+
+            var list = new List<Database.Clanak>();
+            foreach (var clanak in clanci)
+            {
+                var score = _recommender.PredictScore(korisnikId, clanak.Id);
+                if (Math.Round(score, 1) > 3.5)
+                {
+                    list.Add(clanak);
+                }
+            }
+            
+
+            return _mapper.Map<List<Clanak>>(list);
         }
     }
 }

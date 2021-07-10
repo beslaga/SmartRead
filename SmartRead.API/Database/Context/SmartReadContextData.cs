@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SmartRead.API.Helpers;
 using SmartRead.API.Security;
+using System;
 using System.Collections.Generic;
 
 namespace SmartRead.API.Database.Context
@@ -54,6 +55,39 @@ namespace SmartRead.API.Database.Context
                         DrzavaId = 1,
                         Username = "mobile",
                         Mail = "mobile@edu.fit.ba"
+                    },
+                    new Korisnik
+                    {
+                        Id = 4,
+                        Ime = "Mobile",
+                        Prezime = "User",
+                        PasswordSalt = salt,
+                        PasswordHash = HashHelper.GenerateHash(salt, "test"),
+                        DrzavaId = 1,
+                        Username = "mobile1",
+                        Mail = "mobile1@edu.fit.ba"
+                    },
+                    new Korisnik
+                    {
+                        Id = 5,
+                        Ime = "Mobile",
+                        Prezime = "User",
+                        PasswordSalt = salt,
+                        PasswordHash = HashHelper.GenerateHash(salt, "test"),
+                        DrzavaId = 1,
+                        Username = "mobile2",
+                        Mail = "mobile2@edu.fit.ba"
+                    },
+                    new Korisnik
+                    {
+                        Id = 6,
+                        Ime = "Mobile",
+                        Prezime = "User",
+                        PasswordSalt = salt,
+                        PasswordHash = HashHelper.GenerateHash(salt, "test"),
+                        DrzavaId = 1,
+                        Username = "mobile3",
+                        Mail = "mobile3@edu.fit.ba"
                     }
                 );
 
@@ -70,7 +104,10 @@ namespace SmartRead.API.Database.Context
                     new KorisnikUloga { KorisnikId = 1, UlogaId = 1},
                     new KorisnikUloga { KorisnikId = 1, UlogaId = 2},
                     new KorisnikUloga { KorisnikId = 2, UlogaId = 1},
-                    new KorisnikUloga { KorisnikId = 3, UlogaId = 2}
+                    new KorisnikUloga { KorisnikId = 3, UlogaId = 2},
+                    new KorisnikUloga { KorisnikId = 4, UlogaId = 2},
+                    new KorisnikUloga { KorisnikId = 5, UlogaId = 2},
+                    new KorisnikUloga { KorisnikId = 6, UlogaId = 2}
                 );
 
             var clanakFaker = new Faker<Clanak>()
@@ -93,6 +130,25 @@ namespace SmartRead.API.Database.Context
             modelBuilder.Entity<Clanak>()
                 .HasData(clanci);
 
+            var korisnikClanakList = new List<KorisnikClanak>();
+            for(int i = 1; i <= 50; i++)
+            {
+                for(int j = 1; j <= 6; j++)
+                {
+                    var korisnikClank = new KorisnikClanak
+                    {
+                        ClanakId = i,
+                        KorisnikId = j,
+                        BrojPosjeta = new Random().Next(0, 5),
+                        Ocjena = new Random().Next(0, 5)
+                    };
+
+                    korisnikClanakList.Add(korisnikClank);
+                }
+            }
+
+            modelBuilder.Entity<KorisnikClanak>()
+                .HasData(korisnikClanakList);
         }
     }
 }

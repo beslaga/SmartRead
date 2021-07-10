@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SmartRead.API.Helpers;
+using SmartRead.API.Recommender;
 using SmartRead.API.Services;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
@@ -13,10 +14,12 @@ namespace SmartRead.API.Controllers
     public class ClanakController : CrudController<Clanak, ClanakSearchRequest, ClanakInsertRequest, ClanakUpdateRequest>
     {
         private readonly IClanakService _service;
-        public ClanakController(IClanakService service) 
+        private readonly IRecommender _recommender;
+        public ClanakController(IClanakService service, IRecommender recommender)
             : base(service)
         {
             _service = service;
+            _recommender = recommender;
         }
 
         [Authorize(Roles = Security.Roles.Administrator)]
@@ -95,5 +98,24 @@ namespace SmartRead.API.Controllers
             return NoContent();
         }
 
+        [HttpPost("train-model")]
+        public IActionResult TrainModel()
+        {
+            return Ok(_recommender.TrainModel());
+        }
+
+        [HttpGet("recommend")]
+        [Authorize]
+        public async Task<IActionResult> GetRecommendations()
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.GetRecommended((int)korisnikId);
+            return Ok(response);
+        }
     }
 }
