@@ -124,6 +124,7 @@ namespace SmartRead.API.Database.Context
             {
                 var clanak = clanakFaker.Generate();
                 clanak.Id = i;
+                clanak.AutorId = new Random().Next(1, 6);
                 clanci.Add(clanak);
             }
 

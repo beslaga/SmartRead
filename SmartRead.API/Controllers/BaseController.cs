@@ -17,9 +17,9 @@ namespace SmartRead.API.Controllers
 
 
         [HttpGet]
-        public async Task<List<T>> Get([FromQuery] TSearch search)
+        public async Task<List<T>> Get([FromQuery] TSearch request)
         {
-            return await _service.Get(search);
+            return await _service.Get(request);
         }
 
         [HttpGet("{id}")]

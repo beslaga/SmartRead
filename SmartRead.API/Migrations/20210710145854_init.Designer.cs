@@ -10,8 +10,8 @@ using SmartRead.API.Database.Context;
 namespace SmartRead.API.Migrations
 {
     [DbContext(typeof(SmartReadContext))]
-    [Migration("20210710121225_Seed3")]
-    partial class Seed3
+    [Migration("20210710145854_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -64,587 +64,588 @@ namespace SmartRead.API.Migrations
                         new
                         {
                             Id = 1,
-                            AutorId = 2,
-                            Cijena = 0.048682974674125655,
-                            Naslov = "Laboriosam id qui illum sed possimus et dignissimos minus.",
+                            AutorId = 5,
+                            Cijena = 0.77183610143691117,
+                            Naslov = "Ea magnam corrupti in aut quia quis voluptatem.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Qui illo et voluptatibus ullam ipsa animi est excepturi.
-Nihil quasi expedita laborum impedit tempore.
-Fugiat sint eligendi sit natus nobis eum commodi cupiditate ut.
-Aperiam velit amet odio sit facere voluptates recusandae quae reiciendis.
-Facere a sit.
-Rerum eveniet eum neque molestiae."
+                            Text = "Earum ea ut delectus itaque. Maxime quibusdam sunt doloremque ratione quisquam eaque incidunt. Veniam autem rerum saepe quo sequi non praesentium. Rerum ex consequatur quo unde repudiandae eaque consequatur. Velit ullam distinctio eum deserunt quibusdam non."
                         },
                         new
                         {
                             Id = 2,
-                            AutorId = 2,
-                            Cijena = 0.63992482779544069,
-                            Naslov = "Corrupti ut dolores ratione quas dolorem consequatur qui dolorum.",
+                            AutorId = 5,
+                            Cijena = 0.80539895026264663,
+                            Naslov = "Voluptates expedita aliquam.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Id aut sed ut necessitatibus ut cumque est. Reiciendis quisquam omnis minus alias quaerat quod non. Commodi enim eveniet minima molestiae quis corporis aperiam magnam maxime. Modi ea suscipit earum nemo mollitia sed. Harum dolores quaerat modi ad consequuntur molestias sit. Esse quas voluptates et necessitatibus."
+                            Text = @"Consequuntur ipsa dolores cum.
+Officiis aut aut.
+Molestias quia qui ex aperiam dolore dolor asperiores qui sed.
+Non perferendis qui velit nulla delectus et sunt voluptatem."
                         },
                         new
                         {
                             Id = 3,
-                            AutorId = 2,
-                            Cijena = 0.098808669065501856,
-                            Naslov = "Et possimus praesentium dolor sint sapiente.",
+                            AutorId = 5,
+                            Cijena = 0.73088052763178968,
+                            Naslov = "Fugit et adipisci qui molestias quam.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Non voluptate et iure qui molestiae ea illo repellat ullam. Odit dicta fuga voluptatem esse aut. Dolorum maxime fugiat recusandae sit quisquam molestiae dignissimos unde eos. Qui libero rerum. Voluptatem veritatis quisquam necessitatibus autem omnis maiores."
+                            Text = "Facilis explicabo quis quisquam quia enim numquam sunt id vel."
                         },
                         new
                         {
                             Id = 4,
-                            AutorId = 2,
-                            Cijena = 0.90649284790572382,
-                            Naslov = "Harum officia sequi nemo velit dolores nemo omnis vel.",
+                            AutorId = 5,
+                            Cijena = 0.012871898251060349,
+                            Naslov = "Fugit quia est labore fugit deserunt exercitationem eum.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "ut"
+                            Text = "consequatur"
                         },
                         new
                         {
                             Id = 5,
-                            AutorId = 2,
-                            Cijena = 0.30945793739960431,
-                            Naslov = "Ad architecto eveniet praesentium.",
+                            AutorId = 4,
+                            Cijena = 0.86400530993193636,
+                            Naslov = "Dolores aperiam non cum neque ducimus quod possimus harum sed.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Ut doloremque dolor harum nulla dolores dolorem natus molestiae cupiditate."
+                            Text = @"Nostrum magni non harum qui voluptas minima nostrum.
+Ex temporibus exercitationem tenetur.
+Sint quia provident quo quo vitae.
+Qui quis inventore sed voluptate.
+Architecto aut doloremque repudiandae voluptas."
                         },
                         new
                         {
                             Id = 6,
-                            AutorId = 2,
-                            Cijena = 0.17581213786071731,
-                            Naslov = "Harum facilis reiciendis corporis quod error.",
+                            AutorId = 1,
+                            Cijena = 0.92689276716061531,
+                            Naslov = "Qui praesentium consequatur velit impedit atque id.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Eum voluptatem consequatur rerum ea cumque.
-Temporibus facilis asperiores sit."
+                            Text = @"Quam vel quia reiciendis dolorem quidem aut commodi.
+Nam ut nihil voluptas accusamus explicabo maiores eaque.
+Voluptatem fugit odio voluptatem.
+Ex facilis blanditiis possimus sit magni.
+Nisi animi deserunt id quidem.
+Sed enim dolore suscipit."
                         },
                         new
                         {
                             Id = 7,
-                            AutorId = 2,
-                            Cijena = 0.79963689008710759,
-                            Naslov = "Eum dolorem blanditiis.",
+                            AutorId = 4,
+                            Cijena = 0.52893207479684246,
+                            Naslov = "Ipsa velit magnam sed dolorum et odit.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Officia in debitis labore quas est id quaerat voluptatem. Sit sit voluptas ut totam odio assumenda ipsum asperiores dignissimos. Est assumenda repellendus provident reiciendis quia cupiditate illum sequi. Repellendus quaerat consequatur odio quo hic voluptatem et doloribus."
+                            Text = @"Vel debitis labore in rerum pariatur suscipit.
+Debitis assumenda incidunt consequatur voluptatem.
+Aut ut incidunt recusandae dolor est a voluptatibus.
+Necessitatibus voluptatibus ut odit."
                         },
                         new
                         {
                             Id = 8,
-                            AutorId = 2,
-                            Cijena = 0.03257129389446755,
-                            Naslov = "Maiores qui ipsam distinctio quos eum.",
+                            AutorId = 3,
+                            Cijena = 0.97677748462966529,
+                            Naslov = "Quaerat tempora voluptate voluptates vel eius porro consequatur labore.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Veniam delectus et.
-Eveniet aut explicabo.
-Non dignissimos beatae dignissimos asperiores sed unde architecto."
+                            Text = "aliquid"
                         },
                         new
                         {
                             Id = 9,
-                            AutorId = 2,
-                            Cijena = 0.90056860861394961,
-                            Naslov = "Harum corrupti maxime libero alias facilis ex cumque hic totam.",
+                            AutorId = 5,
+                            Cijena = 0.49787941551668541,
+                            Naslov = "Praesentium sequi voluptatem tempore aut quas consequatur eum ut ipsum.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Rerum molestiae explicabo similique illum reprehenderit. Perspiciatis doloremque at ipsam ut unde quisquam repellat doloribus. Voluptas qui blanditiis et consequatur ut ipsam laborum. Modi distinctio velit vero fuga quo ipsa et consectetur sit."
+                            Text = "In est aliquid esse quo maxime aut. Dolorum perspiciatis dolorem praesentium quas non qui. Doloribus est et placeat beatae cupiditate doloremque sunt nemo. Animi cupiditate qui doloribus illo. Consectetur labore qui doloremque sit qui."
                         },
                         new
                         {
                             Id = 10,
-                            AutorId = 2,
-                            Cijena = 0.61500203265575781,
-                            Naslov = "Qui nobis ut commodi animi quidem molestiae.",
+                            AutorId = 4,
+                            Cijena = 0.46450467569031972,
+                            Naslov = "Ipsum laboriosam quo est dolores non autem.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Ex impedit magnam nihil quis doloremque qui aut non dolor.
-At ipsum dolores nisi ipsum incidunt deleniti non deleniti provident.
-Sunt ratione eaque ut eius natus ea ut rerum sint.
-Ullam corporis corrupti id et omnis perferendis."
+                            Text = "Minima ducimus molestias ut dolores officiis expedita. Aut ea qui minima dicta harum quos ex enim. Nihil consequatur at dolorem tempora. In quod nobis quam architecto explicabo reiciendis dolorum repudiandae. Impedit id a eius quod rerum quis ut quo eos."
                         },
                         new
                         {
                             Id = 11,
-                            AutorId = 2,
-                            Cijena = 0.42931152061992861,
-                            Naslov = "Quos sed animi officiis excepturi.",
+                            AutorId = 1,
+                            Cijena = 0.39156110416704842,
+                            Naslov = "Aliquam quia sed qui earum odit enim dolore expedita aut.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "sit"
+                            Text = "est"
                         },
                         new
                         {
                             Id = 12,
                             AutorId = 2,
-                            Cijena = 0.38574644848040607,
-                            Naslov = "Hic assumenda aut reprehenderit autem et.",
+                            Cijena = 0.74653068638710807,
+                            Naslov = "Consectetur ut nihil perferendis vel occaecati consequatur ratione et.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "libero"
+                            Text = "Cupiditate omnis asperiores. Qui dicta ex nobis atque deleniti corporis. Sequi officiis aliquid libero veniam mollitia vel enim eum maiores. Dolores provident optio possimus earum cupiditate aut veniam incidunt."
                         },
                         new
                         {
                             Id = 13,
                             AutorId = 2,
-                            Cijena = 0.56472210100140519,
-                            Naslov = "Saepe voluptatum quaerat eveniet eaque nisi accusamus eum at.",
+                            Cijena = 0.95926893593709406,
+                            Naslov = "Culpa excepturi magnam ipsa distinctio dolores sit nihil enim impedit.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Sint et modi corrupti aut perspiciatis neque iure sed ut.
-Eos recusandae ratione ut voluptates non accusamus et aliquam neque.
-Est fugiat incidunt modi."
+                            Text = "Molestias ipsum cumque eos quia molestias quia modi sed. Vero dicta facere. Esse neque autem velit architecto. Ut nostrum quo esse. Itaque dolore earum quia. Ab sed omnis quo magnam assumenda qui dolore."
                         },
                         new
                         {
                             Id = 14,
-                            AutorId = 2,
-                            Cijena = 0.88679685391802199,
-                            Naslov = "Facilis enim dolorem eos explicabo voluptatem at.",
+                            AutorId = 5,
+                            Cijena = 0.58112237582966797,
+                            Naslov = "Fuga nam ipsa molestias reprehenderit tenetur et aut.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "ipsum"
+                            Text = "Molestias vero qui deserunt numquam sit veniam fuga eum quaerat. Aspernatur qui tenetur expedita. Sint vitae facilis nisi consequuntur. Ut error animi dolore. Accusantium quis aperiam odio voluptatem."
                         },
                         new
                         {
                             Id = 15,
-                            AutorId = 2,
-                            Cijena = 0.25153441925138909,
-                            Naslov = "Natus quas repellat est aliquid et in sapiente.",
+                            AutorId = 1,
+                            Cijena = 0.72477531047760291,
+                            Naslov = "Ut nisi quia dolore aperiam odio sed fuga in.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Ut voluptatibus et illo voluptas impedit qui iure quaerat placeat. Harum maxime nulla autem fugit voluptas repudiandae exercitationem et quod. Tempora earum placeat. Sint quis suscipit eum. Cum qui nobis quis sit. Ipsa quaerat qui delectus dolor et eveniet culpa officiis."
+                            Text = "Error modi omnis id et doloribus."
                         },
                         new
                         {
                             Id = 16,
-                            AutorId = 2,
-                            Cijena = 0.59603550312856002,
-                            Naslov = "Aut iure quidem quae mollitia quis eius vero possimus.",
+                            AutorId = 4,
+                            Cijena = 0.64217864938181757,
+                            Naslov = "Velit assumenda enim molestias voluptatem.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "corporis"
+                            Text = "Quaerat laboriosam ut. Nesciunt occaecati alias esse enim voluptatem libero quae quia. Quas nam rerum quia aperiam accusantium omnis quis expedita. Porro placeat vel. Enim quo sequi. Et iusto minima quis tempora."
                         },
                         new
                         {
                             Id = 17,
                             AutorId = 2,
-                            Cijena = 0.32920877976771851,
-                            Naslov = "Assumenda ab molestiae corrupti.",
+                            Cijena = 0.22273922023490966,
+                            Naslov = "Quae modi eos molestiae deleniti.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Veritatis voluptatum adipisci ipsam est expedita voluptatem totam a esse."
+                            Text = "Et qui ut est fuga eveniet a earum."
                         },
                         new
                         {
                             Id = 18,
                             AutorId = 2,
-                            Cijena = 0.080226511266188003,
-                            Naslov = "Debitis sint tempore qui hic.",
+                            Cijena = 0.48309389431173627,
+                            Naslov = "Soluta ullam odit voluptate eos hic ratione rem repellat esse.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "numquam"
+                            Text = "Numquam odio et nulla maiores aut rerum. Dolor qui eaque nobis maiores repellendus nam non aliquam. Quia numquam nemo id molestiae. Officiis voluptates enim asperiores tenetur deleniti ut. Ullam accusamus ab ipsum vel illo ut eos. Aut quas sunt et est voluptatem neque."
                         },
                         new
                         {
                             Id = 19,
                             AutorId = 2,
-                            Cijena = 0.99582325853212883,
-                            Naslov = "Laudantium excepturi nihil tempore id.",
+                            Cijena = 0.89316612383963823,
+                            Naslov = "Quod quia eos iste eius.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Minus velit voluptate ad.
-Consectetur consequatur dolor quasi voluptates reprehenderit dignissimos ut quaerat dignissimos.
-Voluptas molestiae soluta occaecati quis aut.
-Ad modi perspiciatis mollitia.
-Assumenda rerum maiores asperiores sed ad tempora numquam et dicta.
-Est nemo et debitis veniam dolorem quidem praesentium quia quasi."
+                            Text = @"Ut beatae provident est et optio eum nisi.
+Sed id quos fugiat sed quia.
+Harum adipisci aut ex totam ratione possimus aut molestias eligendi.
+Dolor fugiat maxime est odio expedita tempore vitae."
                         },
                         new
                         {
                             Id = 20,
                             AutorId = 2,
-                            Cijena = 0.24065471824289053,
-                            Naslov = "Nemo voluptatibus molestiae qui harum ut dolores ab molestiae deserunt.",
+                            Cijena = 0.32006834881383384,
+                            Naslov = "Recusandae sed aut quod est laboriosam aperiam.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Molestiae molestiae in."
+                            Text = "Molestiae ut quibusdam debitis et accusantium molestias nesciunt labore dolorem."
                         },
                         new
                         {
                             Id = 21,
                             AutorId = 2,
-                            Cijena = 0.44997994808944869,
-                            Naslov = "Aperiam incidunt molestias soluta cupiditate tenetur numquam possimus.",
+                            Cijena = 0.69865364846710754,
+                            Naslov = "Eos numquam a ab excepturi rerum.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "hic"
+                            Text = "Quo neque sed et quis."
                         },
                         new
                         {
                             Id = 22,
-                            AutorId = 2,
-                            Cijena = 0.20290993349762165,
-                            Naslov = "Vitae reprehenderit saepe est minus soluta aut.",
+                            AutorId = 5,
+                            Cijena = 0.10504900855247351,
+                            Naslov = "Exercitationem laborum maxime aut quisquam nobis occaecati ut velit voluptatibus.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Et repellendus aperiam voluptatum dolores ut id. Ea nihil qui fugiat quia quo. Incidunt repellendus doloremque non veritatis velit. Nobis laudantium nisi."
+                            Text = "Non dolores et aliquam sunt consectetur autem. Nulla eligendi numquam cumque similique consequuntur voluptatem voluptatem quam commodi. Modi aperiam numquam unde dolores sit animi. Dolorum hic omnis et iste illum nulla consequatur. Qui eos vero sit et. Ducimus sint provident."
                         },
                         new
                         {
                             Id = 23,
-                            AutorId = 2,
-                            Cijena = 0.65958929418567069,
-                            Naslov = "Labore optio dolore iure laudantium quia odio.",
+                            AutorId = 3,
+                            Cijena = 0.10803365898692685,
+                            Naslov = "Natus consequatur alias omnis.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Quae qui ipsam sequi assumenda officia accusantium consectetur. Numquam illo veniam quas saepe. Error reprehenderit sit modi aut similique magni non iure commodi. Fugit eaque non distinctio id at assumenda qui quod. Eveniet voluptates rerum et."
+                            Text = @"Deserunt porro hic itaque labore aut blanditiis.
+Ipsa dicta fuga expedita.
+Est omnis consequatur sed iste molestias quia voluptatem aperiam assumenda.
+Delectus repudiandae dignissimos quia magnam rerum maiores ducimus."
                         },
                         new
                         {
                             Id = 24,
-                            AutorId = 2,
-                            Cijena = 0.9146237833959161,
-                            Naslov = "Explicabo doloribus blanditiis tenetur adipisci.",
+                            AutorId = 1,
+                            Cijena = 0.69257434210394242,
+                            Naslov = "Aliquam et reprehenderit autem.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Ut repellendus aliquam omnis et beatae."
+                            Text = @"Qui a commodi nostrum officiis modi et et.
+Laudantium eius aut consequuntur minima natus rerum.
+Aut quia non veniam et.
+Aspernatur dolor unde.
+Rem odit esse quod recusandae dolorum deserunt officia.
+Ea laboriosam sunt."
                         },
                         new
                         {
                             Id = 25,
-                            AutorId = 2,
-                            Cijena = 0.32116308264488497,
-                            Naslov = "Molestiae temporibus sit rem maiores quaerat deserunt voluptatum sed sint.",
+                            AutorId = 1,
+                            Cijena = 0.61344529437527306,
+                            Naslov = "Autem eligendi deleniti.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Libero deleniti perspiciatis autem dignissimos ullam eaque earum recusandae. Natus voluptas harum doloremque officiis atque. Voluptatem molestias dolorem."
+                            Text = "Itaque eligendi nihil architecto qui ullam ex ducimus consequatur eos. Fugit quia iste a eligendi. Est quis corrupti provident. Atque perspiciatis voluptatibus aut harum sint et incidunt."
                         },
                         new
                         {
                             Id = 26,
-                            AutorId = 2,
-                            Cijena = 0.23270369145679459,
-                            Naslov = "Quia fuga sapiente tempore aut et excepturi aliquam iusto ad.",
+                            AutorId = 4,
+                            Cijena = 0.68111956710048005,
+                            Naslov = "Voluptas similique qui omnis in.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "harum"
+                            Text = "Harum ut ratione dolor non eos modi assumenda eos illo."
                         },
                         new
                         {
                             Id = 27,
-                            AutorId = 2,
-                            Cijena = 0.86682753910628496,
-                            Naslov = "Impedit ut quia dolor debitis.",
+                            AutorId = 5,
+                            Cijena = 0.66762774608453168,
+                            Naslov = "Possimus atque pariatur ducimus dolore non neque.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Blanditiis impedit ex incidunt porro asperiores. Consequatur voluptate voluptas. Optio ea et eum assumenda quis. Et cum aut veniam error alias quibusdam. Est sed aut qui hic autem reiciendis. Dolorem magnam voluptatem dolor dolor sint qui quasi."
+                            Text = "itaque"
                         },
                         new
                         {
                             Id = 28,
-                            AutorId = 2,
-                            Cijena = 0.99240994965304152,
-                            Naslov = "Dolor sed rerum temporibus eos ea quos suscipit excepturi.",
+                            AutorId = 4,
+                            Cijena = 0.63460828812541825,
+                            Naslov = "Ut in magnam recusandae ad possimus eum sit nostrum.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Ipsum ratione ex et ratione modi."
+                            Text = "Modi iure voluptates ad ea possimus fugit dolores. Tempora soluta vero pariatur asperiores quia. Similique labore magnam voluptatibus delectus molestiae. Quia sapiente quia hic aut nemo officiis. Placeat tenetur eum fuga inventore suscipit. Omnis suscipit dolorem ipsum vel ipsam saepe qui dicta veniam."
                         },
                         new
                         {
                             Id = 29,
-                            AutorId = 2,
-                            Cijena = 0.036925486306159515,
-                            Naslov = "Soluta vel architecto porro et facere.",
+                            AutorId = 5,
+                            Cijena = 0.74553449998867438,
+                            Naslov = "Et illo unde qui est.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Possimus sint sed et quam eligendi qui.
-Et maiores voluptatibus similique ut.
-Et nam laboriosam repellat odit sapiente aliquid.
-Exercitationem voluptatem cum amet quos aut qui sit."
+                            Text = "Enim velit consequatur aut amet officia quo non. Sit consequatur veritatis qui harum voluptatum repudiandae nesciunt autem ab. Enim similique sed nam autem. Aliquam sit sed dolores qui fugiat ad harum fuga error. Est maiores autem deleniti sapiente dolores quasi. Sunt quia maiores culpa quidem nam saepe maxime quos qui."
                         },
                         new
                         {
                             Id = 30,
-                            AutorId = 2,
-                            Cijena = 0.21219744962276771,
-                            Naslov = "Tenetur maiores culpa mollitia omnis et facere.",
+                            AutorId = 5,
+                            Cijena = 0.91380104977348864,
+                            Naslov = "Qui est tempora.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Ipsum occaecati labore perferendis dolorem dignissimos voluptas."
+                            Text = "Qui voluptas debitis provident repellendus excepturi consequatur."
                         },
                         new
                         {
                             Id = 31,
-                            AutorId = 2,
-                            Cijena = 0.23194701002535736,
-                            Naslov = "Ad facere rem.",
+                            AutorId = 1,
+                            Cijena = 0.80464841975115631,
+                            Naslov = "Et aut quaerat consequatur ut architecto.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Quia dolorum iure tempora."
+                            Text = "placeat"
                         },
                         new
                         {
                             Id = 32,
                             AutorId = 2,
-                            Cijena = 0.42950688974443213,
-                            Naslov = "Porro dignissimos ullam rerum.",
+                            Cijena = 0.19290894139227874,
+                            Naslov = "Ut facere error rem dolore sunt dolor labore debitis.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Dolore aperiam ut rerum voluptas et et."
+                            Text = "Repellat omnis blanditiis aut ut qui."
                         },
                         new
                         {
                             Id = 33,
-                            AutorId = 2,
-                            Cijena = 0.15485687281696911,
-                            Naslov = "Sed inventore eos at.",
+                            AutorId = 1,
+                            Cijena = 0.68249121386673828,
+                            Naslov = "Repellendus eligendi reiciendis nam dolore incidunt.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Voluptas illo veniam sunt laudantium fugiat blanditiis aut iure enim.
-Aliquam illum qui eius nostrum deserunt quia.
-Minus rerum dolorem et.
-Illum veritatis aut consequatur error magnam quis.
-Rem dolorem cum et nam sit."
+                            Text = "corrupti"
                         },
                         new
                         {
                             Id = 34,
-                            AutorId = 2,
-                            Cijena = 0.72386573195637471,
-                            Naslov = "In nostrum dolores similique est in.",
+                            AutorId = 3,
+                            Cijena = 0.20500046769389904,
+                            Naslov = "Tempore aperiam qui.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Assumenda perspiciatis est perspiciatis asperiores rerum mollitia dolorum est enim.
-Vero qui velit eos ut doloremque.
-Asperiores ab reiciendis fuga voluptatem ab dolor nesciunt et.
-Et repellendus quam ducimus occaecati odit quibusdam impedit."
+                            Text = "Placeat neque nostrum. Dignissimos alias enim magni et consequatur iusto quae. Quo fugit nisi at commodi sit veritatis nostrum sunt. Et nesciunt animi aspernatur adipisci."
                         },
                         new
                         {
                             Id = 35,
-                            AutorId = 2,
-                            Cijena = 0.76046122878811384,
-                            Naslov = "Voluptatum debitis beatae dolorum saepe inventore facere iste quia aut.",
+                            AutorId = 5,
+                            Cijena = 0.043419701067460563,
+                            Naslov = "Maiores beatae nostrum reprehenderit modi quasi.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Eligendi laborum dolorum ea et qui veniam mollitia."
+                            Text = "Earum repellendus quam pariatur ut labore quibusdam."
                         },
                         new
                         {
                             Id = 36,
                             AutorId = 2,
-                            Cijena = 0.35634776593947215,
-                            Naslov = "Exercitationem molestiae possimus maiores pariatur tenetur laboriosam nisi laborum.",
+                            Cijena = 0.8793686772134941,
+                            Naslov = "Nulla non voluptas dolor aperiam ut velit omnis.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Vitae nemo fugit ut."
+                            Text = @"Rem voluptas et.
+Molestiae voluptatibus voluptatem.
+Possimus voluptate et quae et.
+Quam ut rerum dignissimos at.
+Ducimus fugit repudiandae.
+Voluptatem debitis ad hic dolor."
                         },
                         new
                         {
                             Id = 37,
-                            AutorId = 2,
-                            Cijena = 0.81626441786823067,
-                            Naslov = "Sed ullam tempora aperiam assumenda enim adipisci explicabo.",
+                            AutorId = 4,
+                            Cijena = 0.006612216125527497,
+                            Naslov = "Natus modi reprehenderit sunt aspernatur aut nisi.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Amet expedita molestiae. Amet rerum culpa sequi. Et quia quibusdam eius omnis enim non quos laborum. Quas et error voluptate beatae. Sed et non laborum natus. Quae consequuntur modi nesciunt a alias ab saepe libero provident."
+                            Text = "Odio quis minima incidunt. Nihil rerum laborum libero est suscipit aut voluptas animi ex. Est illum ab impedit quasi quia debitis temporibus illo qui. Velit quia ex ullam occaecati animi eos."
                         },
                         new
                         {
                             Id = 38,
-                            AutorId = 2,
-                            Cijena = 0.65413669666933671,
-                            Naslov = "Dolorem asperiores et aut quaerat et.",
+                            AutorId = 5,
+                            Cijena = 0.29888778845727804,
+                            Naslov = "Harum accusantium vel qui iure laboriosam excepturi odit veniam.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Deleniti et quia nobis fuga dolore ut eum."
+                            Text = "Id ipsum incidunt cupiditate officiis perspiciatis ratione voluptatem velit. Dolor veritatis voluptates nobis nostrum enim. Vel sed ut deserunt non exercitationem. Iusto mollitia voluptatem minus nam assumenda molestias."
                         },
                         new
                         {
                             Id = 39,
-                            AutorId = 2,
-                            Cijena = 0.63602290890925695,
-                            Naslov = "Illo ut corporis perferendis neque tempore repellat dolorum enim.",
+                            AutorId = 5,
+                            Cijena = 0.19676444968058004,
+                            Naslov = "Est laudantium voluptatem quia est.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Rerum ut et quasi qui vitae et cupiditate. Accusantium incidunt at esse perspiciatis et sed. Quo et modi labore dolorem deleniti ad. Consequatur eum dolorem perferendis."
+                            Text = @"Quod esse qui pariatur voluptatem perspiciatis cumque ab.
+Harum totam unde natus."
                         },
                         new
                         {
                             Id = 40,
-                            AutorId = 2,
-                            Cijena = 0.029361200532578492,
-                            Naslov = "Qui ut possimus eos.",
+                            AutorId = 1,
+                            Cijena = 0.59860779652307172,
+                            Naslov = "Debitis est dicta ad.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Omnis nam voluptatem."
+                            Text = "esse"
                         },
                         new
                         {
                             Id = 41,
-                            AutorId = 2,
-                            Cijena = 0.67409122859783999,
-                            Naslov = "Ullam doloremque nemo ducimus.",
+                            AutorId = 5,
+                            Cijena = 0.1834975905639574,
+                            Naslov = "Voluptatibus debitis cumque amet modi eos amet cumque.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Praesentium dicta animi ad eius atque vel quos laboriosam.
-Est aliquam aut excepturi et voluptas omnis officia expedita nobis.
-Totam voluptatibus quae reprehenderit consectetur aut.
-Qui delectus maxime non non hic omnis.
-Qui dolor quae ad quae et qui."
+                            Text = "voluptatem"
                         },
                         new
                         {
                             Id = 42,
-                            AutorId = 2,
-                            Cijena = 0.13669811894032086,
-                            Naslov = "Aut illo et reprehenderit amet non vero rerum recusandae molestiae.",
+                            AutorId = 3,
+                            Cijena = 0.80307805435875335,
+                            Naslov = "Fugit voluptatem omnis sed illo et nobis totam dolores.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Aut accusantium quis veniam ipsa autem dolores. Ipsa voluptatem sapiente ea aliquam animi perspiciatis. Quidem culpa id nemo nesciunt vel."
+                            Text = "placeat"
                         },
                         new
                         {
                             Id = 43,
-                            AutorId = 2,
-                            Cijena = 0.8792704492245198,
-                            Naslov = "Eos voluptatem iusto necessitatibus ut minima.",
+                            AutorId = 1,
+                            Cijena = 0.16244651617596229,
+                            Naslov = "Aliquam ad sint nobis quis eum corporis.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = @"Aperiam exercitationem sit ut voluptas qui.
-Ut voluptas ut aperiam et.
-Recusandae non enim.
-Exercitationem pariatur aliquam et qui quas necessitatibus."
+                            Text = "assumenda"
                         },
                         new
                         {
                             Id = 44,
-                            AutorId = 2,
-                            Cijena = 0.71243176223357751,
-                            Naslov = "Dolor itaque dolore exercitationem.",
+                            AutorId = 5,
+                            Cijena = 0.82960187868662261,
+                            Naslov = "Dolorum ea deleniti voluptates aut non corporis in autem nisi.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Sint modi corporis non deleniti officiis. Eum voluptas eum velit odit voluptas odit voluptas molestias. Cumque voluptatibus tempore corporis rerum quidem autem. Voluptatem et ipsa quam. Doloremque quia provident magnam fugit."
+                            Text = "est"
                         },
                         new
                         {
                             Id = 45,
-                            AutorId = 2,
-                            Cijena = 0.57281271674335599,
-                            Naslov = "Repellendus dicta nihil sunt officiis aperiam error explicabo.",
+                            AutorId = 5,
+                            Cijena = 0.84029913965626579,
+                            Naslov = "Eius est qui magni molestias earum magni eveniet expedita delectus.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Qui molestiae tempore. Omnis dolorem aut ad qui excepturi in. Aliquam porro delectus rem quibusdam sed."
+                            Text = "Autem voluptatem aut. Nisi doloribus consequatur et optio eos est blanditiis. Id ut molestiae sit. Unde est porro voluptatem. Sunt perferendis voluptatem eius."
                         },
                         new
                         {
                             Id = 46,
-                            AutorId = 2,
-                            Cijena = 0.62230900564338498,
-                            Naslov = "Doloribus et aut temporibus laborum natus qui.",
+                            AutorId = 3,
+                            Cijena = 0.25539902749257115,
+                            Naslov = "Cumque excepturi ipsa laboriosam repudiandae molestias vitae dolores.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Quasi cumque laboriosam voluptatibus in officia doloribus."
+                            Text = @"Voluptatem totam cupiditate totam tenetur tempore corporis quia.
+Totam voluptatum et voluptatem voluptatibus ullam facilis aspernatur nemo.
+Vitae assumenda delectus omnis asperiores et minus sed.
+Tempora ut recusandae perspiciatis quam.
+Nam dolore et facere et laboriosam a perferendis inventore."
                         },
                         new
                         {
                             Id = 47,
-                            AutorId = 2,
-                            Cijena = 0.052745667776440117,
-                            Naslov = "Molestiae nihil ratione voluptas consequuntur fugit.",
+                            AutorId = 3,
+                            Cijena = 0.63685927895682826,
+                            Naslov = "Quo est ea et.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Dolorem quis voluptates natus assumenda necessitatibus numquam ducimus."
+                            Text = "Earum nam delectus illo. Non voluptas modi iste perferendis reiciendis sint sed. Eum quas ipsam ab sit ut eligendi ex quia possimus. Occaecati assumenda sint aut omnis tempore commodi veniam maxime id. Nulla laborum omnis aspernatur repudiandae qui dolor rerum aperiam. Quisquam exercitationem voluptas eius ipsa error nulla."
                         },
                         new
                         {
                             Id = 48,
-                            AutorId = 2,
-                            Cijena = 0.68023871708672434,
-                            Naslov = "Unde aut voluptatibus eius labore tempore libero sint consequatur.",
+                            AutorId = 5,
+                            Cijena = 0.38008775020953628,
+                            Naslov = "Qui perspiciatis non ratione quia possimus.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "rem"
+                            Text = "Laboriosam et incidunt autem voluptas et distinctio nihil dolores. Iusto exercitationem sunt quia quisquam commodi et rem officia temporibus. Aut sint est dolore sit quia harum laudantium."
                         },
                         new
                         {
                             Id = 49,
-                            AutorId = 2,
-                            Cijena = 0.24797658075018628,
-                            Naslov = "Aut pariatur commodi omnis.",
+                            AutorId = 4,
+                            Cijena = 0.49104450945325406,
+                            Naslov = "Maiores sit maiores est quam.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Corrupti voluptas ea voluptatibus. Non occaecati quae corporis vel consequuntur. Cupiditate facere odio quod qui quia laudantium. Ipsum laborum corporis voluptas nesciunt corrupti."
+                            Text = "Ut optio iste suscipit et non sed velit aut consequatur."
                         },
                         new
                         {
                             Id = 50,
-                            AutorId = 2,
-                            Cijena = 0.90031479294426497,
-                            Naslov = "Impedit ea fugit ut aut ut aliquid dolor voluptatum alias.",
+                            AutorId = 4,
+                            Cijena = 0.58780001736609266,
+                            Naslov = "Quis veniam laboriosam nihil beatae tempora aspernatur qui perspiciatis.",
                             Obrisan = false,
                             OdobravateljId = 1,
                             Odobren = true,
-                            Text = "Fuga numquam repellat recusandae. Nesciunt quis provident aut repudiandae similique ea delectus reiciendis debitis. Beatae dolorem et delectus officia suscipit."
+                            Text = "Doloremque labore sed culpa ducimus fugit."
                         });
                 });
 
@@ -761,90 +762,90 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             Id = 1,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 895, DateTimeKind.Local).AddTicks(2673),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 403, DateTimeKind.Local).AddTicks(1890),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Maid",
                             Kredit = 0.0,
                             Mail = "maid.beslagic@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "Bešlagić",
                             Username = "maid"
                         },
                         new
                         {
                             Id = 2,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 902, DateTimeKind.Local).AddTicks(9296),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 409, DateTimeKind.Local).AddTicks(6179),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Desktop",
                             Kredit = 0.0,
                             Mail = "desktop@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "Admin",
                             Username = "desktop"
                         },
                         new
                         {
                             Id = 3,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 902, DateTimeKind.Local).AddTicks(9929),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 409, DateTimeKind.Local).AddTicks(6732),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Mobile",
                             Kredit = 0.0,
                             Mail = "mobile@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "User",
                             Username = "mobile"
                         },
                         new
                         {
                             Id = 4,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 903, DateTimeKind.Local).AddTicks(80),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 409, DateTimeKind.Local).AddTicks(6798),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Mobile",
                             Kredit = 0.0,
                             Mail = "mobile1@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "User",
                             Username = "mobile1"
                         },
                         new
                         {
                             Id = 5,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 903, DateTimeKind.Local).AddTicks(120),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 409, DateTimeKind.Local).AddTicks(6842),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Mobile",
                             Kredit = 0.0,
                             Mail = "mobile2@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "User",
                             Username = "mobile2"
                         },
                         new
                         {
                             Id = 6,
-                            DatumRegistracije = new DateTime(2021, 7, 10, 14, 12, 24, 903, DateTimeKind.Local).AddTicks(155),
+                            DatumRegistracije = new DateTime(2021, 7, 10, 16, 58, 54, 409, DateTimeKind.Local).AddTicks(6881),
                             DatumRodjenja = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DrzavaId = 1,
                             Ime = "Mobile",
                             Kredit = 0.0,
                             Mail = "mobile3@edu.fit.ba",
                             Obrisan = false,
-                            PasswordHash = "hPo1LoAQi80CqP3qpvMSvKgX+83TlScQlz7F0nJ9IMHI4BpWtpwLFwFs5sLxIEJHD40ogSyMi0eJXc5l8IhDdQ==",
-                            PasswordSalt = "57BXkcGxnlnu/4kc9puMww==",
+                            PasswordHash = "XZWQQ52vGBABh8K7lqv6IjVBfq39JgGM+rItfUBuTAErL5mFOoqo9g+rDcAaVyBsyRMHvcI+8TBTCyYxQC1ByQ==",
+                            PasswordSalt = "3/4JKbfsJQkmoxEHXYkjVQ==",
                             Prezime = "User",
                             Username = "mobile3"
                         });
@@ -880,27 +881,11 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 1,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 2,
-                            ClanakId = 1,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 1,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
                             ClanakId = 1,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -908,33 +893,49 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 3,
+                            ClanakId = 1,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 1,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
                             KorisnikId = 5,
+                            ClanakId = 1,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
                             ClanakId = 1,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 1,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 2,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 2,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 0,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -942,15 +943,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 3,
                             ClanakId = 2,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 2,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -960,23 +961,23 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 2,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 2,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 3,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 2
                         },
                         new
                         {
@@ -984,7 +985,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 3,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 1
                         },
                         new
                         {
@@ -992,15 +993,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 3,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 3,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 4
                         },
                         new
                         {
@@ -1016,13 +1017,13 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 3,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 4,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 0
                         },
@@ -1030,45 +1031,69 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 2,
                             ClanakId = 4,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 4,
                             BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 4,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 4,
-                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 3,
                             ClanakId = 4,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 4,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
+                            KorisnikId = 5,
+                            ClanakId = 4,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 4,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
                             KorisnikId = 1,
+                            ClanakId = 5,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 5,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 5,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
                             ClanakId = 5,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -1076,41 +1101,17 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 5,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 5,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 5,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
                             KorisnikId = 5,
                             ClanakId = 5,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 5,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -1118,7 +1119,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 1,
                             ClanakId = 6,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -1126,15 +1127,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 2,
                             ClanakId = 6,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 6,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 3
                         },
@@ -1144,13 +1145,13 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 6,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 6,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 1
                         },
@@ -1160,11 +1161,43 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 6,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 1,
+                            ClanakId = 7,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 7,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 7,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 7,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
                             ClanakId = 7,
                             BrojPosjeta = 0,
                             Kupljen = false,
@@ -1172,47 +1205,47 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 7,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 7,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 7,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 7,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
                             KorisnikId = 6,
                             ClanakId = 7,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 8,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 8,
                             BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 1,
+                            KorisnikId = 3,
+                            ClanakId = 8,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 8,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
                             ClanakId = 8,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -1220,41 +1253,9 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 8,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 8,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 8,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 8,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
                             KorisnikId = 6,
                             ClanakId = 8,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 1
                         },
@@ -1262,7 +1263,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 1,
                             ClanakId = 9,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 0,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -1270,45 +1271,69 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 2,
                             ClanakId = 9,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 9,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 9,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 9,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
+                            KorisnikId = 5,
+                            ClanakId = 9,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
                             KorisnikId = 6,
                             ClanakId = 9,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 1,
+                            ClanakId = 10,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 10,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 10,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
                             ClanakId = 10,
                             BrojPosjeta = 0,
                             Kupljen = false,
@@ -1316,35 +1341,11 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 10,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 10,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 10,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
                             KorisnikId = 5,
                             ClanakId = 10,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 2
                         },
                         new
                         {
@@ -1352,15 +1353,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 10,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 11,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
@@ -1368,47 +1369,47 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 11,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 11,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 11,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 11,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 11,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 12,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
@@ -1416,7 +1417,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 12,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 4
                         },
                         new
                         {
@@ -1424,27 +1425,11 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 12,
                             BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 12,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 5,
-                            ClanakId = 12,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
+                            KorisnikId = 4,
                             ClanakId = 12,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -1452,25 +1437,41 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 5,
+                            ClanakId = 12,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 12,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
                             KorisnikId = 1,
                             ClanakId = 13,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 13,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 13,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 4
                         },
@@ -1478,29 +1479,61 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 4,
                             ClanakId = 13,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 13,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 13,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 14,
                             BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 2
                         },
                         new
                         {
-                            KorisnikId = 1,
+                            KorisnikId = 2,
+                            ClanakId = 14,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 14,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 14,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
                             ClanakId = 14,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -1508,87 +1541,31 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 14,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 14,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 14,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 14,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
                             KorisnikId = 6,
                             ClanakId = 14,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 15,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 15,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 15,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 15,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 15,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 0
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 3,
                             ClanakId = 15,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -1596,39 +1573,31 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 1,
-                            ClanakId = 16,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 16,
+                            KorisnikId = 4,
+                            ClanakId = 15,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 16,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 16,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 5,
+                            ClanakId = 15,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 15,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
                             ClanakId = 16,
                             BrojPosjeta = 1,
                             Kupljen = false,
@@ -1636,7 +1605,31 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 2,
+                            ClanakId = 16,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 16,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 16,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
                             ClanakId = 16,
                             BrojPosjeta = 4,
                             Kupljen = false,
@@ -1644,7 +1637,23 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 6,
+                            ClanakId = 16,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
                             KorisnikId = 1,
+                            ClanakId = 17,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
                             ClanakId = 17,
                             BrojPosjeta = 1,
                             Kupljen = false,
@@ -1652,23 +1661,23 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
+                            KorisnikId = 3,
                             ClanakId = 17,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 17,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 3,
-                            ClanakId = 17,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
+                            KorisnikId = 5,
                             ClanakId = 17,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -1676,23 +1685,47 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 5,
+                            KorisnikId = 6,
                             ClanakId = 17,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 18,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 18,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 6,
-                            ClanakId = 17,
-                            BrojPosjeta = 2,
+                            KorisnikId = 3,
+                            ClanakId = 18,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 18,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 2
                         },
                         new
                         {
-                            KorisnikId = 1,
+                            KorisnikId = 5,
                             ClanakId = 18,
                             BrojPosjeta = 0,
                             Kupljen = false,
@@ -1700,49 +1733,17 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 18,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 18,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
+                            KorisnikId = 6,
                             ClanakId = 18,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 18,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
                             Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 18,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 19,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 1
                         },
@@ -1750,79 +1751,79 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 2,
                             ClanakId = 19,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 19,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 19,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 19,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 0,
                             Kupljen = false,
                             Ocjena = 2
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 3,
                             ClanakId = 19,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 20,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 20,
                             BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
-                            KorisnikId = 3,
-                            ClanakId = 20,
+                            KorisnikId = 4,
+                            ClanakId = 19,
                             BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
-                            KorisnikId = 4,
+                            KorisnikId = 5,
+                            ClanakId = 19,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 19,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 20,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
                             ClanakId = 20,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 20,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 20,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 20,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -1830,9 +1831,9 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 6,
                             ClanakId = 20,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
@@ -1840,29 +1841,29 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 21,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 21,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 21,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
+                            KorisnikId = 3,
+                            ClanakId = 21,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
                             KorisnikId = 4,
                             ClanakId = 21,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 0
                         },
@@ -1872,7 +1873,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 21,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
@@ -1880,19 +1881,11 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 21,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 1,
-                            ClanakId = 22,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
                             ClanakId = 22,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -1900,23 +1893,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 3,
-                            ClanakId = 22,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 22,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
+                            KorisnikId = 2,
                             ClanakId = 22,
                             BrojPosjeta = 1,
                             Kupljen = false,
@@ -1924,49 +1901,73 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 3,
                             ClanakId = 22,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 1,
-                            ClanakId = 23,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 23,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 23,
-                            BrojPosjeta = 4,
+                            KorisnikId = 4,
+                            ClanakId = 22,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 0
                         },
                         new
                         {
+                            KorisnikId = 5,
+                            ClanakId = 22,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 22,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 23,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 23,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 23,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
                             KorisnikId = 4,
                             ClanakId = 23,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 23,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 3
                         },
@@ -1974,29 +1975,13 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 6,
                             ClanakId = 23,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 1,
-                            ClanakId = 24,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 24,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
                             ClanakId = 24,
                             BrojPosjeta = 1,
                             Kupljen = false,
@@ -2004,19 +1989,35 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 2,
+                            ClanakId = 24,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 24,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
                             KorisnikId = 4,
                             ClanakId = 24,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 24,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         },
                         new
                         {
@@ -2032,7 +2033,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 25,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2040,7 +2041,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 25,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2048,7 +2049,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 25,
                             BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2056,59 +2057,27 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 25,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 25,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 25,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 26,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 26,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 26,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 4,
-                            ClanakId = 26,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
+                            KorisnikId = 1,
                             ClanakId = 26,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -2116,96 +2085,80 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 2,
                             ClanakId = 26,
                             BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 27,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
                             Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 27,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 3,
-                            ClanakId = 27,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 27,
-                            BrojPosjeta = 3,
+                            ClanakId = 26,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
-                            KorisnikId = 5,
-                            ClanakId = 27,
+                            KorisnikId = 4,
+                            ClanakId = 26,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 2
                         },
                         new
                         {
-                            KorisnikId = 6,
-                            ClanakId = 27,
+                            KorisnikId = 5,
+                            ClanakId = 26,
                             BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 2
                         },
                         new
                         {
-                            KorisnikId = 1,
-                            ClanakId = 28,
-                            BrojPosjeta = 3,
+                            KorisnikId = 6,
+                            ClanakId = 26,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 0
                         },
                         new
                         {
+                            KorisnikId = 1,
+                            ClanakId = 27,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
                             KorisnikId = 2,
-                            ClanakId = 28,
-                            BrojPosjeta = 0,
+                            ClanakId = 27,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 3,
-                            ClanakId = 28,
-                            BrojPosjeta = 1,
+                            ClanakId = 27,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 4,
-                            ClanakId = 28,
-                            BrojPosjeta = 0,
+                            ClanakId = 27,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 5,
-                            ClanakId = 28,
+                            ClanakId = 27,
                             BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 0
@@ -2213,14 +2166,78 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 6,
+                            ClanakId = 27,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
                             ClanakId = 28,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 28,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 0
                         },
                         new
                         {
+                            KorisnikId = 3,
+                            ClanakId = 28,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 28,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 28,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 28,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
                             KorisnikId = 1,
+                            ClanakId = 29,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 29,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
                             ClanakId = 29,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -2228,35 +2245,19 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
+                            KorisnikId = 4,
                             ClanakId = 29,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 0
                         },
                         new
                         {
-                            KorisnikId = 3,
+                            KorisnikId = 5,
                             ClanakId = 29,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 29,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
                             Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 29,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 2
                         },
                         new
                         {
@@ -2264,19 +2265,11 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 29,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 30,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
-                            KorisnikId = 2,
+                            KorisnikId = 1,
                             ClanakId = 30,
                             BrojPosjeta = 0,
                             Kupljen = false,
@@ -2284,23 +2277,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 2,
+                            ClanakId = 30,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
                             KorisnikId = 3,
-                            ClanakId = 30,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 30,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
                             ClanakId = 30,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -2308,11 +2293,27 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 4,
+                            ClanakId = 30,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 30,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
                             KorisnikId = 6,
                             ClanakId = 30,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
@@ -2320,15 +2321,15 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 31,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 31,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
@@ -2336,29 +2337,29 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 31,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 31,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 31,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 31,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 4
                         },
@@ -2366,9 +2367,9 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 1,
                             ClanakId = 32,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 4
                         },
                         new
                         {
@@ -2376,21 +2377,21 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 32,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 32,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 32,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 4
                         },
@@ -2398,21 +2399,61 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 5,
                             ClanakId = 32,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 32,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
+                            ClanakId = 33,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 33,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 33,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 33,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 33,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
                             ClanakId = 33,
                             BrojPosjeta = 2,
                             Kupljen = false,
@@ -2420,8 +2461,16 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
+                            KorisnikId = 1,
+                            ClanakId = 34,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
                             KorisnikId = 2,
-                            ClanakId = 33,
+                            ClanakId = 34,
                             BrojPosjeta = 0,
                             Kupljen = false,
                             Ocjena = 2
@@ -2429,23 +2478,23 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 3,
-                            ClanakId = 33,
-                            BrojPosjeta = 1,
+                            ClanakId = 34,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 4,
-                            ClanakId = 33,
-                            BrojPosjeta = 0,
+                            ClanakId = 34,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 5,
-                            ClanakId = 33,
+                            ClanakId = 34,
                             BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 4
@@ -2453,62 +2502,22 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 6,
-                            ClanakId = 33,
-                            BrojPosjeta = 3,
+                            ClanakId = 34,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
-                            ClanakId = 34,
-                            BrojPosjeta = 4,
+                            ClanakId = 35,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 2,
-                            ClanakId = 34,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 34,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 34,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 34,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 34,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
                             ClanakId = 35,
                             BrojPosjeta = 1,
                             Kupljen = false,
@@ -2516,35 +2525,27 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 2,
+                            KorisnikId = 3,
                             ClanakId = 35,
                             BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 35,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 35,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 35,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2552,21 +2553,21 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 35,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 36,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 36,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 2
                         },
@@ -2574,9 +2575,9 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 3,
                             ClanakId = 36,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2584,7 +2585,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 36,
                             BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 2
                         },
                         new
                         {
@@ -2598,141 +2599,117 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 6,
                             ClanakId = 36,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 37,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 37,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 37,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 37,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 37,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 37,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 38,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 38,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 38,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 38,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 38,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 38,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 39,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 39,
                             BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 37,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 3,
-                            ClanakId = 39,
-                            BrojPosjeta = 3,
+                            ClanakId = 37,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 4,
-                            ClanakId = 39,
-                            BrojPosjeta = 4,
+                            ClanakId = 37,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
+                            ClanakId = 37,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 37,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 38,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 38,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 38,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 38,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 38,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 38,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 39,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
                             ClanakId = 39,
                             BrojPosjeta = 4,
                             Kupljen = false,
@@ -2740,19 +2717,43 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 6,
+                            KorisnikId = 3,
                             ClanakId = 39,
                             BrojPosjeta = 3,
                             Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 39,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 39,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 39,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 40,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 1
                         },
                         new
                         {
@@ -2760,20 +2761,68 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 40,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 40,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 40,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 40,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 40,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 41,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 41,
+                            BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 41,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 41,
                             BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 0
@@ -2781,110 +2830,46 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 5,
-                            ClanakId = 40,
-                            BrojPosjeta = 2,
+                            ClanakId = 41,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 6,
-                            ClanakId = 40,
+                            ClanakId = 41,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 42,
                             BrojPosjeta = 4,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 42,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
-                            KorisnikId = 1,
-                            ClanakId = 41,
+                            KorisnikId = 3,
+                            ClanakId = 42,
                             BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
-                            KorisnikId = 2,
-                            ClanakId = 41,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 41,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
                             KorisnikId = 4,
-                            ClanakId = 41,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 41,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 41,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 42,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 42,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 42,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 42,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 42,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
                             ClanakId = 42,
                             BrojPosjeta = 3,
                             Kupljen = false,
@@ -2892,200 +2877,168 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         },
                         new
                         {
-                            KorisnikId = 1,
-                            ClanakId = 43,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 43,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 43,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 43,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
                             KorisnikId = 5,
-                            ClanakId = 43,
-                            BrojPosjeta = 0,
+                            ClanakId = 42,
+                            BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 6,
+                            ClanakId = 42,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
                             ClanakId = 43,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 44,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 44,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 44,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 44,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 44,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 44,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 45,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 2
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 45,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 1
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 45,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 45,
-                            BrojPosjeta = 3,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 45,
                             BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 4
                         },
                         new
                         {
+                            KorisnikId = 2,
+                            ClanakId = 43,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 43,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 43,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 43,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 43,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 44,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 44,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 44,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 44,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 44,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 4
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 44,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 3
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 45,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
+                            ClanakId = 45,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 45,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 45,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 5,
+                            ClanakId = 45,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
                             KorisnikId = 6,
                             ClanakId = 45,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 1,
-                            ClanakId = 46,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 46,
-                            BrojPosjeta = 2,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 46,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 4
-                        },
-                        new
-                        {
-                            KorisnikId = 4,
-                            ClanakId = 46,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 5,
-                            ClanakId = 46,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
-                            Ocjena = 3
-                        },
-                        new
-                        {
-                            KorisnikId = 6,
-                            ClanakId = 46,
-                            BrojPosjeta = 0,
-                            Kupljen = false,
                             Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
-                            ClanakId = 47,
+                            ClanakId = 46,
                             BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 2
@@ -3093,23 +3046,23 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 2,
-                            ClanakId = 47,
-                            BrojPosjeta = 2,
+                            ClanakId = 46,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 3,
-                            ClanakId = 47,
-                            BrojPosjeta = 2,
+                            ClanakId = 46,
+                            BrojPosjeta = 4,
                             Kupljen = false,
                             Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 4,
-                            ClanakId = 47,
+                            ClanakId = 46,
                             BrojPosjeta = 0,
                             Kupljen = false,
                             Ocjena = 2
@@ -3117,16 +3070,64 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         new
                         {
                             KorisnikId = 5,
+                            ClanakId = 46,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 6,
+                            ClanakId = 46,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 1,
+                            ClanakId = 47,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
+                            KorisnikId = 2,
                             ClanakId = 47,
                             BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 47,
+                            BrojPosjeta = 3,
+                            Kupljen = false,
+                            Ocjena = 2
+                        },
+                        new
+                        {
+                            KorisnikId = 4,
+                            ClanakId = 47,
+                            BrojPosjeta = 2,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
+                            KorisnikId = 5,
+                            ClanakId = 47,
+                            BrojPosjeta = 2,
+                            Kupljen = false,
+                            Ocjena = 0
+                        },
+                        new
+                        {
                             KorisnikId = 6,
                             ClanakId = 47,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 1,
                             Kupljen = false,
                             Ocjena = 1
                         },
@@ -3136,7 +3137,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 48,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         },
                         new
                         {
@@ -3144,7 +3145,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 48,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
@@ -3152,29 +3153,29 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 48,
                             BrojPosjeta = 3,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 4,
                             ClanakId = 48,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 48,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 3
                         },
                         new
                         {
                             KorisnikId = 6,
                             ClanakId = 48,
-                            BrojPosjeta = 0,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 1
                         },
@@ -3182,25 +3183,25 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 1,
                             ClanakId = 49,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 1
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 2,
                             ClanakId = 49,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 4,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         },
                         new
                         {
                             KorisnikId = 3,
                             ClanakId = 49,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 4
+                            Ocjena = 2
                         },
                         new
                         {
@@ -3208,13 +3209,13 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 49,
                             BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 3
+                            Ocjena = 2
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 49,
-                            BrojPosjeta = 1,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 4
                         },
@@ -3222,49 +3223,49 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                         {
                             KorisnikId = 6,
                             ClanakId = 49,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 1
                         },
                         new
                         {
                             KorisnikId = 1,
                             ClanakId = 50,
-                            BrojPosjeta = 4,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 2,
-                            ClanakId = 50,
-                            BrojPosjeta = 1,
-                            Kupljen = false,
-                            Ocjena = 0
-                        },
-                        new
-                        {
-                            KorisnikId = 3,
-                            ClanakId = 50,
-                            BrojPosjeta = 2,
+                            BrojPosjeta = 3,
                             Kupljen = false,
                             Ocjena = 3
                         },
                         new
                         {
+                            KorisnikId = 2,
+                            ClanakId = 50,
+                            BrojPosjeta = 0,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
+                            KorisnikId = 3,
+                            ClanakId = 50,
+                            BrojPosjeta = 1,
+                            Kupljen = false,
+                            Ocjena = 1
+                        },
+                        new
+                        {
                             KorisnikId = 4,
                             ClanakId = 50,
-                            BrojPosjeta = 4,
+                            BrojPosjeta = 2,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 0
                         },
                         new
                         {
                             KorisnikId = 5,
                             ClanakId = 50,
-                            BrojPosjeta = 3,
+                            BrojPosjeta = 0,
                             Kupljen = false,
-                            Ocjena = 0
+                            Ocjena = 2
                         },
                         new
                         {
@@ -3272,7 +3273,7 @@ Exercitationem pariatur aliquam et qui quas necessitatibus."
                             ClanakId = 50,
                             BrojPosjeta = 1,
                             Kupljen = false,
-                            Ocjena = 2
+                            Ocjena = 4
                         });
                 });
 

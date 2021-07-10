@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20210206223512_KstegorijaObrisan.cs" />
-    <Compile Remove="Migrations\20210206223512_KstegorijaObrisan.Designer.cs" />
-    <Compile Remove="Migrations\20210626061053_seedKorisniciUloge.cs" />
-    <Compile Remove="Migrations\20210626061053_seedKorisniciUloge.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="Bogus" Version="33.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.11" />

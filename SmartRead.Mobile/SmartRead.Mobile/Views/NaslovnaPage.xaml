@@ -6,7 +6,7 @@
              xmlns:model="clr-namespace:SmartRead.Model;assembly=SmartRead.Model"
              xmlns:system="clr-namespace:System;assembly=netstandard"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:NaslovnaViewModel />
     </ContentPage.BindingContext>
@@ -18,43 +18,51 @@
     </ContentPage.Resources>
 
     <RefreshView x:DataType="vm:NaslovnaViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <ListView x:Name="ItemsListView"
+        <StackLayout>
+            <Entry Text="{Binding Search}"></Entry>
+            <Picker 
+                    x:Name="Kategorija"
+                    ItemsSource="{Binding Kategorije}"
+                    ItemDisplayBinding="{Binding Naziv}"
+                    SelectedItem="{Binding Kategorija}"></Picker>
+            <Button Text="Seach" Command="{Binding SearchCommand}"></Button>
+            <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10" x:DataType="vm:ClanakItemViewModel">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="50" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="20*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" x:DataType="vm:ClanakItemViewModel">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label 
                                            Grid.Row="0"
                                            Grid.Column="0"
                                            FontSize="16"
                                            Padding="10, 0, 0, 0"
                                            LineBreakMode="NoWrap" 
                                         >
-                                    <Label.FormattedText>
-                                        <FormattedString>
-                                            <FormattedString.Spans>
-                                                <Span Text="{Binding Naslov}" Style="{DynamicResource ListItemTextStyle}" FontSize="16"/>
-                                                <Span Text="{x:Static system:Environment.NewLine}" />
-                                                <Span Text="by" />
-                                                <Span Text=" " />
-                                                <Span Text="{Binding Autor}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13"/>
-                                            </FormattedString.Spans>
-                                        </FormattedString>
-                                    </Label.FormattedText>
-                                </Label>
-                                <ImageButton Grid.Row="0" Grid.Column="1"
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="{Binding Naslov}" Style="{DynamicResource ListItemTextStyle}" FontSize="16"/>
+                                                    <Span Text="{x:Static system:Environment.NewLine}" />
+                                                    <Span Text="by" />
+                                                    <Span Text=" " />
+                                                    <Span Text="{Binding Autor}" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13"/>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <ImageButton Grid.Row="0" Grid.Column="1"
                                              IsOpaque="True"
                                              Source="{Binding IsFavouriteImage}"
                                              HorizontalOptions="End"
@@ -62,18 +70,19 @@
                                              HeightRequest="30"                                         
                                              Command="{Binding ToggleFavouriteCommand}"
                                 ></ImageButton>
-                            </Grid>
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer 
+                                </Grid>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type vm:NaslovnaViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
-                                </TapGestureRecognizer>
-                            </StackLayout.GestureRecognizers>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                    </TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </RefreshView>
 </ContentPage>

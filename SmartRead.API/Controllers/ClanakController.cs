@@ -5,6 +5,7 @@ using SmartRead.API.Recommender;
 using SmartRead.API.Services;
 using SmartRead.Model;
 using SmartRead.Model.Requests;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SmartRead.API.Controllers

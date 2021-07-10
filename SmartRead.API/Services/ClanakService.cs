@@ -41,12 +41,27 @@ namespace SmartRead.API.Services
 
         public override async Task<List<Clanak>> Get(ClanakSearchRequest search)
         {
-            var list = await _context.Set<Database.Clanak>()
+            var query = _context.Set<Database.Clanak>()
                .AsNoTracking()
                .Include(i => i.Kategorije)
                .ThenInclude(i => i.Kategorija)
                .Include(i => i.Autor)
-               .ToListAsync();
+               .AsQueryable();
+
+            if(!string.IsNullOrEmpty(search.Search))
+            {
+                query = query.Where(i => i.Naslov.Contains(search.Search) ||
+                    i.Autor.Ime.Contains(search.Search) || 
+                    i.Autor.Prezime.Contains(search.Search)
+                );
+            }
+
+            if(search.KategorijaId > 0)
+            {
+                query = query.Where(i => i.Kategorije.Any(j => j.KategorijaId == search.KategorijaId));
+            }
+
+            var list = await query.ToListAsync();
 
             return _mapper.Map<List<Clanak>>(list);
         }
@@ -200,7 +215,12 @@ namespace SmartRead.API.Services
 
         public async Task<List<Clanak>> GetRecommended(int korisnikId)
         {
-            var clanci = await _context.Clanci.ToListAsync();
+            var clanci = await _context.Set<Database.Clanak>()
+              .AsNoTracking()
+              .Include(i => i.Kategorije)
+                .ThenInclude(i => i.Kategorija)
+              .Include(i => i.Autor)
+              .ToListAsync();
 
             var list = new List<Database.Clanak>();
             foreach (var clanak in clanci)
