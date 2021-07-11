@@ -70,7 +70,7 @@ namespace SmartRead.Mobile.ViewModels
 
         async void OnItemSelected(ClanakItemViewModel item)
         {
-            if (item == null)
+            if (item == null || (item.Cijena > 0 && item.IsKupljen == false))
                 return;
 
             // This will push the ItemDetailPage onto the navigation stack
