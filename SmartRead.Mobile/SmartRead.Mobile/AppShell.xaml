@@ -81,6 +81,9 @@
     <FlyoutItem Title="Naslovna">
         <ShellContent Route="NaslovnaPage" ContentTemplate="{DataTemplate local:NaslovnaPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Notifikacije">
+        <ShellContent Route="NotifikacijePage" ContentTemplate="{DataTemplate local:NotifikacijePage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Kategorije">
         <ShellContent Route="KategorijePage" ContentTemplate="{DataTemplate local:KategorijePage}" />
     </FlyoutItem>

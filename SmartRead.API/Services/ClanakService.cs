@@ -98,6 +98,28 @@ namespace SmartRead.API.Services
 
             await _context.SaveChangesAsync();
 
+            var korisnici = await _context.KorisnikKategorije
+                .Where(i => request.Kategorije.Contains(i.KategorijaId))
+                .Select(i => i.KorisnikId)
+                .Distinct()
+                .ToListAsync();
+
+            foreach (var korisnikId in korisnici)
+            {
+                if (korisnikId != entity.AutorId)
+                {
+                    var notifikacija = new Database.Notifikacija
+                    {
+                        KorisnikId = korisnikId,
+                        ClanakId = entity.Id
+                    };
+
+                    await _context.Notifikacije.AddAsync(notifikacija);
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
             return _mapper.Map<Clanak>(entity);
         }
 

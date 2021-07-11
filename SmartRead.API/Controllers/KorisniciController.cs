@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SmartRead.API.Helpers;
 using SmartRead.API.Services;
 using SmartRead.API.Stripe;
@@ -70,6 +71,20 @@ namespace SmartRead.API.Controllers
             }
 
             return NotFound();
+        }
+
+        [HttpGet("notifikacije")]
+        [Authorize]
+        public async Task<IActionResult> GetNotifikacije()
+        {
+            var id = HttpContext.GetUserId();
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.Notifikacije((int)id);
+            return Ok(response);
         }
     }
 }

@@ -192,8 +192,21 @@ namespace SmartRead.API.Services
         {
             var list = await _context.Likes
                 .Include(i => i.Clanak)
-                .Where(i => i.KorisnikId == id)
+                .Where(i => i.KorisnikId == id && i.Clanak.Odobren)
                 .Select(i => i.Clanak)
+                .ToListAsync();
+
+            return _mapper.Map<List<Clanak>>(list);
+        }
+
+        public async Task<List<Clanak>> Notifikacije(int id)
+        {
+            var list = await _context.Notifikacije
+                .AsNoTracking()
+                .Include(i => i.Clanak)
+                .Where(i => i.KorisnikId == id && i.Clanak.Odobren)
+                .Select(i => i.Clanak)
+                .OrderByDescending(i => i.Id)
                 .ToListAsync();
 
             return _mapper.Map<List<Clanak>>(list);
