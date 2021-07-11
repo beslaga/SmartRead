@@ -16,5 +16,8 @@ namespace SmartRead.API.Services
         Task<KorisnikClanak> GetOcjenu(int clanakId, int korisnikId);
         Task<bool> Kupi(int clanakId, int korisnikId);
         Task<KorisnikPrijava> Prijavi(int clanakId, int korisnikId, ClanakPrijavaRequest request);
+        Task<List<KorisnikPrijava>> GetPrijave();
+        Task<KorisnikPrijava> Uvazi(int id);
+        Task<KorisnikPrijava> Pregledano(int id);
     }
 }

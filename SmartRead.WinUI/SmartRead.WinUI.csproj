@@ -70,6 +70,18 @@
     <Compile Include="Forms\Clanci\DodajClanakForm.Designer.cs">
       <DependentUpon>DodajClanakForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Clanci\PrijavaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clanci\PrijavaForma.Designer.cs">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clanci\PrijavljeniClanciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clanci\PrijavljeniClanciForm.Designer.cs">
+      <DependentUpon>PrijavljeniClanciForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Kategorije\DodajKategorijuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clanci\DodajClanakForm.resx">
       <DependentUpon>DodajClanakForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clanci\PrijavaForma.resx">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clanci\PrijavljeniClanciForm.resx">
+      <DependentUpon>PrijavljeniClanciForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kategorije\DodajKategorijuForm.resx">
       <DependentUpon>DodajKategorijuForm.cs</DependentUpon>

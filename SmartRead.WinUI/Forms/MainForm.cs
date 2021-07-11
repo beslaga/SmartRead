@@ -127,5 +127,16 @@ namespace SmartRead.WinUI.Forms
             var form = new DodajKorisnikaForm();
             form.Show();
         }
+
+        private void prijavljeniČlanciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new PrijavljeniClanciForm();
+            this.IsMdiContainer = true;
+            CloseLatestChild();
+            form.ParentChanged += MdiFormParentChangedHandler; form.MdiParent = this;
+            form.Show();
+            form.WindowState = FormWindowState.Minimized;
+            form.WindowState = FormWindowState.Maximized;
+        }
     }
 }

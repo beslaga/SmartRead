@@ -135,7 +135,7 @@ namespace SmartRead.API.Controllers
 
         [HttpGet("{id}/ocjena")]
         [Authorize]
-        public async Task<IActionResult> GetOcijenu(int id)
+        public async Task<IActionResult> GetOcjenu(int id)
         {
             var korisnikId = HttpContext.GetUserId();
             if (korisnikId == null)
@@ -178,6 +178,42 @@ namespace SmartRead.API.Controllers
             }
 
             var response = await _service.Prijavi(id, (int)korisnikId, request);
+
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest();
+        }
+
+        [HttpGet("prijave")]
+        [Authorize(Roles = Security.Roles.Administrator)]
+        public async Task<IActionResult> GetPrijave()
+        {
+            var response = await _service.GetPrijave();
+            return Ok(response);
+        }
+
+        [HttpPost("{id}/uvazi")]
+        [Authorize(Roles = Security.Roles.Administrator)]
+        public async Task<IActionResult> Uvazi(int id)
+        {
+            var response = await _service.Uvazi(id);
+
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest();
+        }
+
+        [HttpPost("{id}/pregledano")]
+        [Authorize(Roles = Security.Roles.Administrator)]
+        public async Task<IActionResult> Pregledano(int id)
+        {
+            var response = await _service.Pregledano(id);
 
             if (response != null)
             {

@@ -335,5 +335,47 @@ namespace SmartRead.API.Services
 
             return _mapper.Map<KorisnikPrijava>(korisnikPrijava);
         }
+
+        public async Task<List<KorisnikPrijava>> GetPrijave()
+        {
+            var prijavljeniClanci = await _context.KorisnikPrijave
+                .AsNoTracking()
+                .Include(i => i.Clanak)
+                    .ThenInclude(i => i.Autor)
+                .Include(i => i.Korisnik)
+                .Where(i => !i.Pregledano && !i.Uvazeno)
+                .ToListAsync();
+
+
+            return _mapper.Map<List<KorisnikPrijava>>(prijavljeniClanci);
+        }
+
+        public async Task<KorisnikPrijava> Uvazi(int id)
+        {
+            var prijava = await _context.KorisnikPrijave.FindAsync(id);
+            
+            if (prijava != null)
+            {
+                prijava.Uvazeno = true;
+                await _context.SaveChangesAsync();
+                return _mapper.Map<KorisnikPrijava>(prijava);
+            }
+
+            return null;
+        }
+
+        public async Task<KorisnikPrijava> Pregledano(int id)
+        {
+            var prijava = await _context.KorisnikPrijave.FindAsync(id);
+
+            if (prijava != null)
+            {
+                prijava.Pregledano = true;
+                await _context.SaveChangesAsync();
+                return _mapper.Map<KorisnikPrijava>(prijava);
+            }
+
+            return null;
+        }
     }
 }
