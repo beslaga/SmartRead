@@ -1,12 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:SmartRead.Mobile.ViewModels" 
+             xmlns:converters="clr-namespace:SmartRead.Mobile.Converters"
+             x:DataType="viewmodels:NoviClanakViewModel"
              x:Class="SmartRead.Mobile.Views.NoviClanakPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ImageConverter x:Key="ImgConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <viewmodels:NoviClanakViewModel />
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <StackLayout>
+                <Label Text="Slika"></Label>
+                <Frame 
+                Padding="0"
+                WidthRequest="165"
+                HeightRequest="165" 
+                IsClippedToBounds="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderColor="Black"
+            >
+                    <Image 
+                    Source="{Binding Slika, Converter={StaticResource ImgConverter}}" 
+                    Aspect="AspectFill"
+                >
+                    </Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer 
+                        Command="{Binding PromijeniSliku}"
+                        CommandParameter="Image1"
+                    />
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Label Text="Naslov"></Label>
+                <Entry Text="{Binding Naslov}"></Entry>
+                <Label Text="Text"></Label>
+                <Entry Text="{Binding Text}"></Entry>
+                <Label Text="Cijena"></Label>
+                <Entry Text="{Binding Cijena}"></Entry>
+                <ListView 
+                SelectionMode="None"
+                ItemsSource="{Binding Kategorije}" Margin="20" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,0,0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:DataType="viewmodels:SelectableKategorijaViewModel" 
+                                       Text="{Binding Kategorija.Naziv}"  Grid.Column="0"/>
+                                    <CheckBox x:DataType="viewmodels:SelectableKategorijaViewModel" 
+                                          IsChecked="{Binding Selected}" Grid.Column="1" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Kreiraj" Command="{Binding Spasi}"></Button>
+            </StackLayout>
+        </RefreshView>
     </ContentPage.Content>
 </ContentPage>
