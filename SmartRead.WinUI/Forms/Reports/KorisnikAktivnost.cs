@@ -17,7 +17,7 @@ namespace SmartRead.WinUI.Forms.Reports
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string Username { get; set; }
-        public int BrojPosjeta { get; set; }
+        public int BrojPregleda { get; set; }
     }
     public partial class KorisnikAktivnost : Form
     {
@@ -39,7 +39,7 @@ namespace SmartRead.WinUI.Forms.Reports
                     Ime = item.Korisnik.Ime,
                     Prezime = item.Korisnik.Prezime,
                     Username = item.Korisnik.Username,
-                    BrojPosjeta = item.BrojPosjeta
+                    BrojPregleda = item.BrojPosjeta
                 });
             }
 
