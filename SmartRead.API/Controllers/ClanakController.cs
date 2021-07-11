@@ -166,5 +166,25 @@ namespace SmartRead.API.Controllers
 
             return BadRequest();
         }
+
+        [HttpPost("{id}/prijavi")]
+        [Authorize]
+        public async Task<IActionResult> Prijavi(int id, ClanakPrijavaRequest request)
+        {
+            var korisnikId = HttpContext.GetUserId();
+            if (korisnikId == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await _service.Prijavi(id, (int)korisnikId, request);
+
+            if (response != null)
+            {
+                return Ok(response);
+            }
+
+            return BadRequest();
+        }
     }
 }

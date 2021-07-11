@@ -1,9 +1,11 @@
 ﻿using SmartRead.Mobile.Helpers;
 using SmartRead.Mobile.Services;
 using SmartRead.Model;
+using SmartRead.Model.Requests;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace SmartRead.Mobile.ViewModels
@@ -18,6 +20,8 @@ namespace SmartRead.Mobile.ViewModels
 
         private readonly APIService _clanakServis = new APIService("clanak");
 
+        public Command PrijaviClanakCommand { get; set; }
+
         public string Naslov
         {
             get => naslov;
@@ -31,6 +35,28 @@ namespace SmartRead.Mobile.ViewModels
         }
 
         private int ocjena;
+
+        public ClanakDetaljiViewModel()
+        {
+            PrijaviClanakCommand = new Command(async () => await PrijaviClanak());
+        }
+
+        private async Task PrijaviClanak()
+        {
+            string result = await Application.Current.MainPage.DisplayPromptAsync(
+                "Prijava", "Navedite razlog prijave članka.");
+
+            if (!string.IsNullOrEmpty(result))
+            {
+                var request = new ClanakPrijavaRequest
+                {
+                    Opis = result
+                };
+
+                await _clanakServis.Insert<KorisnikPrijava>(request, $"{id}/prijavi");
+            }
+        }
+
         public int Ocjena
         {
             get => ocjena;

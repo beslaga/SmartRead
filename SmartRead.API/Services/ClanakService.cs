@@ -319,5 +319,21 @@ namespace SmartRead.API.Services
 
             return false;
         }
+
+        public async Task<KorisnikPrijava> Prijavi(int clanakId, int korisnikId, ClanakPrijavaRequest request)
+        {
+            var korisnikPrijava = new Database.KorisnikPrijava
+            {
+                ClanakId = clanakId,
+                KorisnikId = korisnikId,
+                Opis = request.Opis,
+                VrijemePrijave = DateTime.Now
+            };
+
+            await _context.KorisnikPrijave.AddAsync(korisnikPrijava);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<KorisnikPrijava>(korisnikPrijava);
+        }
     }
 }

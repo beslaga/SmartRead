@@ -15,23 +15,24 @@
             <converters:ImageConverter x:Key="ImgConverter"></converters:ImageConverter>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView VerticalOptions="FillAndExpand">
-                    <Image 
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView VerticalOptions="FillAndExpand">
+                        <Image 
                         Source="{Binding Slika, Converter={StaticResource ImgConverter}}" 
                         VerticalOptions="Center" HeightRequest="200" Aspect="AspectFill" WidthRequest="450"
                     ></Image>
-                </ContentView>
+                    </ContentView>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-        <rating:SfRating 
+            <rating:SfRating 
                     Value="{Binding Ocjena}"
                     Margin="0, 5"
                     ItemCount="5"
@@ -39,13 +40,18 @@
                     HorizontalOptions="Center"
                     ValueChanged="Rating_ValueChanged"
                 />
-        
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="{Binding Naslov}" FontSize="Title"/>
-                <Label Text="{Binding Sadrzaj}" FontSize="Body"/>
-            </StackLayout>
-        </ScrollView>
-    </Grid>
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                    <Label Text="{Binding Naslov}" FontSize="Title"/>
+                    <Label Text="{Binding Sadrzaj}" FontSize="Body"/>
+                </StackLayout>
+            </ScrollView>
+            
+        </Grid>
+        <Button Text="Prijavi članak" Command="{Binding PrijaviClanakCommand}">
+        </Button>
+    </StackLayout>
+    
     
 </ContentPage>
