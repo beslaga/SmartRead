@@ -11,9 +11,7 @@ namespace SmartRead.Mobile
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(ClanakDetaljiPage), typeof(ClanakDetaljiPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             CurrentItem = new LoginPage();
         }
 

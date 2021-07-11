@@ -16,7 +16,6 @@ namespace SmartRead.Mobile
 
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
