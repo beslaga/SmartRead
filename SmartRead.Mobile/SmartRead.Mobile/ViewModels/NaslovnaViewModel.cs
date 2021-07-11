@@ -67,7 +67,8 @@ namespace SmartRead.Mobile.ViewModels
                 var items = await _clanakServis.Get<List<Clanak>>(request);
                 foreach (var item in items)
                 {
-                    Items.Add(new ClanakItemViewModel(item.Id, item.Naslov, item.Autor.Ime + " " + item.Autor.Prezime));
+                    Items.Add(
+                        new ClanakItemViewModel(item.Id, item.Naslov, item.Autor.Ime + " " + item.Autor.Prezime, item.Cijena));
                 }                
             }
             catch (Exception ex)
@@ -92,7 +93,7 @@ namespace SmartRead.Mobile.ViewModels
                 var items = await _clanakServis.Get<List<Clanak>>(null, "recommend");
                 foreach (var item in items)
                 {
-                    Items.Add(new ClanakItemViewModel(item.Id, item.Naslov, item.Autor.Ime + " " + item.Autor.Prezime));
+                    Items.Add(new ClanakItemViewModel(item.Id, item.Naslov, item.Autor.Ime + " " + item.Autor.Prezime, item.Cijena));
                 }
 
                 Kategorije.Clear();

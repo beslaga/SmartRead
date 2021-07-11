@@ -4,7 +4,8 @@
              x:Class="SmartRead.Mobile.Views.NaslovnaPage"
              xmlns:vm="clr-namespace:SmartRead.Mobile.ViewModels" 
              xmlns:model="clr-namespace:SmartRead.Model;assembly=SmartRead.Model"
-             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:system="clr-namespace:System;assembly=netstandard" 
+             xmlns:converters="clr-namespace:SmartRead.Mobile.Converters"
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
@@ -14,6 +15,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
+            <converters:InverseBoolConverter x:Key="InverseBool" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -69,7 +71,22 @@
                                              WidthRequest="30"
                                              HeightRequest="30"                                         
                                              Command="{Binding ToggleFavouriteCommand}"
-                                ></ImageButton>
+                                             IsVisible="{Binding IsKupljen}"
+                                    ></ImageButton>
+                                    <ImageButton Grid.Row="0" Grid.Column="1"
+                                             IsOpaque="True"
+                                             Source="coin.png"
+                                             HorizontalOptions="End"
+                                             WidthRequest="30"
+                                             HeightRequest="30"                                         
+                                             Command="{Binding KupiCommand}"
+                                             IsVisible="{Binding IsKupljen, Converter={StaticResource InverseBool}}"
+                                    ></ImageButton>
+                                    <Label Grid.Row="0" Grid.Column="2"
+                                            Text="{Binding Cijena}" 
+                                           IsVisible="{Binding IsKupljen, Converter={StaticResource InverseBool}}">
+                                        
+                                    </Label>
                                 </Grid>
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 

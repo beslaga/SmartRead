@@ -104,6 +104,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="coin.png" />
     <Content Include="heart-empty.png" />
     <Content Include="heart-filled.png" />
     <Content Include="Properties\Default.rd.xml" />

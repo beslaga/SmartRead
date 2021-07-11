@@ -29,6 +29,8 @@ namespace SmartRead.API.Services
                     .ThenInclude(i => i.Clanak)
                 .Include(i => i.Clanci)
                 .Include(i => i.KorisnikClanci)
+                    .ThenInclude(i => i.Clanak)
+                        .ThenInclude(i => i.Autor)
                 .FirstOrDefaultAsync(x => x.Username == username);
 
             if (korisnik != null)
