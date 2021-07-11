@@ -36,12 +36,14 @@ namespace SmartRead.WinUI.Forms
             this.članciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.članciToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajČlanakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prijavljeniČlanciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.korisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiKorisnikeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajKorisnikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aktivnostKorisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoImage = new System.Windows.Forms.PictureBox();
-            this.prijavljeniČlanciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +54,7 @@ namespace SmartRead.WinUI.Forms
             this.kategorijeToolStripMenuItem,
             this.članciToolStripMenuItem,
             this.korisniciToolStripMenuItem,
+            this.reportiToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -95,16 +98,23 @@ namespace SmartRead.WinUI.Forms
             // članciToolStripMenuItem1
             // 
             this.članciToolStripMenuItem1.Name = "članciToolStripMenuItem1";
-            this.članciToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.članciToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.članciToolStripMenuItem1.Text = "Prikaži Članke";
             this.članciToolStripMenuItem1.Click += new System.EventHandler(this.članciToolStripMenuItem1_Click);
             // 
             // dodajČlanakToolStripMenuItem
             // 
             this.dodajČlanakToolStripMenuItem.Name = "dodajČlanakToolStripMenuItem";
-            this.dodajČlanakToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajČlanakToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.dodajČlanakToolStripMenuItem.Text = "Dodaj Članak";
             this.dodajČlanakToolStripMenuItem.Click += new System.EventHandler(this.dodajČlanakToolStripMenuItem_Click);
+            // 
+            // prijavljeniČlanciToolStripMenuItem
+            // 
+            this.prijavljeniČlanciToolStripMenuItem.Name = "prijavljeniČlanciToolStripMenuItem";
+            this.prijavljeniČlanciToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.prijavljeniČlanciToolStripMenuItem.Text = "Prijavljeni Članci";
+            this.prijavljeniČlanciToolStripMenuItem.Click += new System.EventHandler(this.prijavljeniČlanciToolStripMenuItem_Click);
             // 
             // korisniciToolStripMenuItem
             // 
@@ -136,6 +146,21 @@ namespace SmartRead.WinUI.Forms
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // reportiToolStripMenuItem
+            // 
+            this.reportiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aktivnostKorisniciToolStripMenuItem});
+            this.reportiToolStripMenuItem.Name = "reportiToolStripMenuItem";
+            this.reportiToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.reportiToolStripMenuItem.Text = "Izvještaji ";
+            // 
+            // aktivnostKorisniciToolStripMenuItem
+            // 
+            this.aktivnostKorisniciToolStripMenuItem.Name = "aktivnostKorisniciToolStripMenuItem";
+            this.aktivnostKorisniciToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.aktivnostKorisniciToolStripMenuItem.Text = "Korisnici po aktivnosti";
+            this.aktivnostKorisniciToolStripMenuItem.Click += new System.EventHandler(this.aktivnostKorisniciToolStripMenuItem_Click);
+            // 
             // logoImage
             // 
             this.logoImage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -146,13 +171,6 @@ namespace SmartRead.WinUI.Forms
             this.logoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoImage.TabIndex = 3;
             this.logoImage.TabStop = false;
-            // 
-            // prijavljeniČlanciToolStripMenuItem
-            // 
-            this.prijavljeniČlanciToolStripMenuItem.Name = "prijavljeniČlanciToolStripMenuItem";
-            this.prijavljeniČlanciToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.prijavljeniČlanciToolStripMenuItem.Text = "Prijavljeni Članci";
-            this.prijavljeniČlanciToolStripMenuItem.Click += new System.EventHandler(this.prijavljeniČlanciToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -186,5 +204,7 @@ namespace SmartRead.WinUI.Forms
         private System.Windows.Forms.ToolStripMenuItem prikažiKorisnikeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajKorisnikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prijavljeniČlanciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aktivnostKorisniciToolStripMenuItem;
     }
 }

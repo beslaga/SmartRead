@@ -53,7 +53,15 @@ namespace SmartRead.Mobile.ViewModels
                 Kategorije = kategorije
             };
 
-            await _clanakService.Insert<Clanak>(request);
+            try
+            {
+                await _clanakService.Insert<Clanak>(request);
+                await Application.Current.MainPage.DisplayAlert("Success", "Uspješno kreiran članak.", "OK");
+            }
+            catch
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Pogrešni podatci.", "OK");
+            }
         }
 
         private async Task OnTapped()

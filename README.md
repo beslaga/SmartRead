@@ -1,7 +1,22 @@
-# Introduction 
-SmartRead is a subscription based online news site.
+# SmartRead
 
-# Getting Started
-1. After cloning repo, in DatabaseBackup folder, import SQL script to create DB and get neccessary data.
-2. Build the app and enjoy.
+## Desktop
+```
+Username: Desktop
+Password: test
+```
+
+## Mobile
+```
+Username: Mobile
+Password: test
+```
+
+## Stripe
+```
+Card: 4242424242424242
+Cvc: Any 3 numbers
+Month: Any future month
+Year: Any future year
+```
 

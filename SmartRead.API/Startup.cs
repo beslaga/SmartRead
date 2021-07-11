@@ -54,6 +54,7 @@ namespace SmartRead.API
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddTransient<IKategorijeService, KategorijeService>();
+            services.AddTransient<IPregledService, PregledService>();
             
             services.AddTransient<IClanakService, ClanakService>();
 

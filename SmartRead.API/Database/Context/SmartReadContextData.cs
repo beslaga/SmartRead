@@ -18,6 +18,13 @@ namespace SmartRead.API.Database.Context
                     new Drzava { Id = 2, Naziv = "Hrvatska"}
                 );
 
+            modelBuilder.Entity<Kategorija>()
+                .HasData
+                (
+                    new Kategorija { Id = 1, Naziv = "Tehnologija", },
+                    new Kategorija { Id = 2, Naziv = "Sport" }
+                );
+
             var salt = HashHelper.GenerateSalt();
 
             modelBuilder.Entity<Korisnik>()
@@ -116,7 +123,7 @@ namespace SmartRead.API.Database.Context
                 .RuleFor(i => i.OdobravateljId, i => 1)
                 .RuleFor(i => i.Text, i => i.Lorem.Text())
                 .RuleFor(i => i.Odobren, true)
-                .RuleFor(i => i.Cijena, i => i.Random.Double());
+                .RuleFor(i => i.Cijena, 0);
 
 
             var clanci = new List<Clanak>();

@@ -118,6 +118,10 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reports\KorisnikAktivnost.cs" />
+    <Compile Include="Forms\Reports\KorisnikAktivnost.Designer.cs">
+      <DependentUpon>KorisnikAktivnost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\APIService.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\ImageHelper.cs" />
@@ -158,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\KorisnikAktivnost.resx">
+      <DependentUpon>KorisnikAktivnost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

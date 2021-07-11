@@ -17,6 +17,7 @@ namespace SmartRead.Mobile.Views
     public partial class ClanakDetaljiPage : ContentPage
     {
         private readonly APIService _clanakService = new APIService("clanak");
+        private readonly APIService _pregledService = new APIService("pregled");
         private readonly ClanakDetaljiViewModel model;
         public ClanakDetaljiPage()
         {
@@ -24,9 +25,10 @@ namespace SmartRead.Mobile.Views
             BindingContext = model = new ClanakDetaljiViewModel();
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
+            await _pregledService.Insert<KorisnikClanak>(null, $"clanak/{model.Id}");
         }
 
         private async void Rating_ValueChanged(object sender, Syncfusion.SfRating.XForms.ValueEventArgs e)
