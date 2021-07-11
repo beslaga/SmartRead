@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace SmartRead.API.Services
 {
     public class KategorijeService : 
-        CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>
+        CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>,
+        IKategorijeService
     {
         public KategorijeService(SmartReadContext context, IMapper mapper) : base(context, mapper)
         {
@@ -19,7 +20,7 @@ namespace SmartRead.API.Services
 
         public override async Task<List<Kategorija>> Get(KategorijaSearchRequest search)
         {
-            var query = _context.Set<Kategorija>()
+            var query = _context.Set<Database.Kategorija>()
                 .AsNoTracking()
                 .AsQueryable();
 
@@ -32,6 +33,37 @@ namespace SmartRead.API.Services
 
             var list = await query.ToListAsync();
             return _mapper.Map<List<Kategorija>>(list);
+        }
+
+        public async Task<KorisnikKategorija> Subscribe(int kategorijaId, int korisnikId)
+        {
+            var sub = await _context.KorisnikKategorije.FindAsync(korisnikId, kategorijaId);
+
+            if (sub == null)
+            {
+                var newSub = new Database.KorisnikKategorija { KorisnikId = korisnikId, KategorijaId = kategorijaId };
+                await _context.KorisnikKategorije.AddAsync(newSub);
+                await _context.SaveChangesAsync();
+
+                return _mapper.Map<KorisnikKategorija>(newSub);
+            }
+
+            return null;
+        }
+
+        public async Task<bool> Unsubscribe(int kategorijaId, int korisnikId)
+        {
+            var sub = await _context.KorisnikKategorije.FindAsync(korisnikId, kategorijaId);
+
+            if (sub != null)
+            {
+                _context.KorisnikKategorije.Remove(sub);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+
+            return false;
         }
     }
 }

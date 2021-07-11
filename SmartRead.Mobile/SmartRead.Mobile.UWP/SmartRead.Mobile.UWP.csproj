@@ -104,6 +104,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bell-empty.png" />
+    <Content Include="bell-filled.png" />
     <Content Include="coin.png" />
     <Content Include="heart-empty.png" />
     <Content Include="heart-filled.png" />

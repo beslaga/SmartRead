@@ -31,6 +31,7 @@ namespace SmartRead.API.Services
                 .Include(i => i.KorisnikClanci)
                     .ThenInclude(i => i.Clanak)
                         .ThenInclude(i => i.Autor)
+                .Include(i => i.PretplaceneKategorije)
                 .FirstOrDefaultAsync(x => x.Username == username);
 
             if (korisnik != null)

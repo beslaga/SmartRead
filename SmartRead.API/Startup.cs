@@ -53,9 +53,7 @@ namespace SmartRead.API
             services.AddControllers().AddNewtonsoftJson(options => 
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
-            services.AddTransient<
-                ICrudService<Kategorija, KategorijaSearchRequest, KategorijaUpsertRequest, KategorijaUpsertRequest>,
-                CrudService<Kategorija, KategorijaSearchRequest, Database.Kategorija, KategorijaUpsertRequest, KategorijaUpsertRequest>>();
+            services.AddTransient<IKategorijeService, KategorijeService>();
             
             services.AddTransient<IClanakService, ClanakService>();
 
